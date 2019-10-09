@@ -5,12 +5,9 @@ class Brands extends Component  {
 
       render(style){
 
-        console.log(this.props.style)
-
-     
   return (
 
-        <ul className="brandsNav" style={ this.props.style }>
+        <ul className="brandsNav">
         <li>
         <NavLink to="/adidas" >
         Adidas

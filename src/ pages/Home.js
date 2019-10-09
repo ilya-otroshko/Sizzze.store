@@ -1,10 +1,13 @@
 import React from 'react'
 
+import ChooseBrand from '../components/home/ChooseBrand'
 
 export default function Home(){
   return (
     
-    <div></div>
+    <div>
+      <ChooseBrand />
+    </div>
 
   )
 }
