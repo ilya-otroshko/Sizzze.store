@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Home from './ pages/Home';
-import { Store } from './ pages/Store';
+import Home from './pages/Home';
+import Store from './pages/Store';
 import { Header } from './components/header/Header';
 
 
