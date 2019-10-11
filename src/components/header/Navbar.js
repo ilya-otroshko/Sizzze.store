@@ -11,8 +11,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 class Navbar extends Component {
 
     state = {
-      isListVisible: false,
-      color: 'grey'
+      isListVisible: false
     };
 
     toggleList = () => {
@@ -20,12 +19,11 @@ class Navbar extends Component {
         this.setState({
             isListVisible: !this.state.isListVisible
         });
+
     }; 
 
 render(){
-    console.log(this.state.isListVisible)
     const { isListVisible } = this.state;
-    const color  = { color: this.state.color }
     return(
         <nav>
         <ul className="pageNav">
@@ -53,7 +51,6 @@ render(){
                 <FontAwesomeIcon 
                 icon={faChevronDown} 
                 className="brandsIcon"
-                style = {color}
                 />
                 </NavLink>
                 <TransitionGroup>

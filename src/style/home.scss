@@ -37,6 +37,7 @@
                     position: absolute;
                     right: 40px;
                     top: 50px;
+                    transition: .4s;
                   }
 
                 p{
@@ -53,6 +54,7 @@
                       width: 90%;
                       border-radius: 5px;
                       background:rgba(255, 255,255, .6);
+                      transition: .4s;
                   }
                   .mainInput:hover{
                     color: white;         
@@ -96,48 +98,49 @@
 
 
       .showBrandsName-enter-active {
-          animation: showBrandsName 200ms;
+          animation: fade 200ms;
         }
 
       .showBrandsName-exit-active {
-          animation: showBrandsName 200ms alternate-reverse;
+          animation: fade 200ms alternate-reverse;
         }
 
-
-        @keyframes showBrandsName
-      {
-        0%{
-          opacity: 0;
-
-        }
-        25%{
-            opacity: 0;
-
-        }
-        50%{
-            opacity: .5;
-
-        }
-        75%{
-          opacity: .75;
-
-        }
-        100%{
-          opacity: 1;
-
-        }
-      }
 
 .newItems
 {
-  background: #e9cbff;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,242,233,1) 50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  h2{
+    margin: 30px;
+  }
 }
 .slickSlider{
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
-  img{
-    width: 300px;
+  cursor: grab;
+  .slick-list{
+    width: 100%;
+    margin: 0 auto;
   }
+  .blockInSlider{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: box-shadow .2s;
+    img{
+      width: 100%;
+    }
+  }
+  .blockInSlider:hover{
+    box-shadow: 0px 0px 7px 1px #00000026;
+  }
+   
 }
 
 .nextArrow,
@@ -146,16 +149,84 @@
   width: 10px;
   height: 10px;
   position: absolute;
-  top: 50%;
-  right: 10px;
-  cursor: pointer;
+  top: -10%;
+  right: 20px;
+
   svg{
     font-size: 40px;
+    cursor: pointer;
+  }
+}
+.nextArrow{
+  svg{
+    margin-left: 10px;
   }
 }
 
 .prevArrow{
-  top: 60%;
-  left: -20px;
-  transform: rotate(180deg)
+  svg{
+    margin-left: -20px;
+  }
+  left: 20px;
+}
+.hoverNextIcon{
+  transform: rotate(70deg);
+    position: absolute;
+    top: -7px;
+    right: -17px;
+    color: #00000003;
+}
+
+.infoSlider{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  h3{
+    font-weight: bold;
+    font-size: 20px;
+  }
+  p{
+    font-weight: bold;
+    color: #e9cbff;
+  }
+  span{
+    font-size: 13px;  
+  }
+}
+
+.showImg-enter-active{
+  animation: fade 200ms;
+}
+
+.showImg-exit-active{
+  position: absolute;
+  opacity: 0;
+}
+
+@keyframes fade
+{
+  0%{
+    opacity: 0;
+
+  }
+  25%{
+      opacity: 0;
+
+  }
+  50%{
+      opacity: .5;
+
+  }
+  75%{
+    opacity: .75;
+
+  }
+  100%{
+    opacity: 1; 
+  }
+}
+
+.slick-track 
+{
+  display: flex;
 }

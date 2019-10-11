@@ -16,40 +16,61 @@ h1{
     margin-bottom: 0;
       li{
         padding-bottom: 15px;
+        .pagelink,
+        .pagelink:hover,
+        .pagelink:focus{
+            margin:10px 20px;
+            color: grey;
+            outline: none;
+            text-decoration: none;
+            position: relative;
+          }
+          .pagelink:hover {
+            color: black;
+          }
+          .pagelink:after {
+            display: block;
+            position: absolute;
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 0;
+            height: 1px;
+            background-color: #d298ff; 
+            content: "";
+            transition: width 0.3s ease-out;
+          }
+          
+          .pagelink:hover:after,
+          .pagelink:focus:after {
+            width: 100%;
+            height: 3px;
+          }
+    
       }
-    .pagelink,
-    .pagelink:hover,
-    .pagelink:focus{
-        margin:10px 20px;
-        color: grey;
-        outline: none;
-        text-decoration: none;
-        position: relative;
+      li:last-child:hover
+      {
+        .pagelink:after {
+          display: block;
+          position: absolute;
+          left: 50%; 
+          transform: translateX(-50%); 
+          width: 0;
+          height: 1px;
+          background-color: #d298ff; 
+          content: "";
+          transition: width 0.3s ease-out;
+        }
+        .pagelink:after,
+          .pagelink:focus:after {
+            width: 100%;
+            height: 3px;
+          }
+
+        svg{
+          color: #d298ff;
+        }
       }
-  
-    .pagelink:hover {
-        color: black;
-      }
-  
-      .pagelink:after {
-        display: block;
-        position: absolute;
-        left: 50%; 
-        transform: translateX(-50%); 
-        width: 0;
-        height: 1px;
-        background-color: #d298ff; 
-        content: "";
-        transition: width 0.3s ease-out;
-      }
-      
-      .pagelink:hover:after,
-      .pagelink:focus:after {
-        width: 100%;
-        height: 3px;
-      }
-  
-        .brandsNav
+  .brandsNav
         {
           margin-top: 15px;
           list-style: none;
