@@ -15,17 +15,38 @@ class Navbar extends Component {
     };
 
     toggleList = () => {
-         
         this.setState({
             isListVisible: !this.state.isListVisible
         });
 
     }; 
+   
 
 render(){
     const { isListVisible } = this.state;
+    
+    window.addEventListener('scroll', function(){
+
+        if(this.window.pageYOffset > 90){
+           document.getElementsByTagName('nav')[0].classList.add('navScroll');
+           document.getElementsByTagName('li')[1].classList.add('liScroll');
+           document.getElementsByClassName('scrollTitle')[0].classList.add('scrollTitleShow');
+        }
+        if(this.window.pageYOffset < 90){
+            document.getElementsByTagName('nav')[0].classList.remove('navScroll');
+            document.getElementsByTagName('li')[1].classList.remove('liScroll');
+            document.getElementsByClassName('scrollTitle')[0].classList.remove('scrollTitleShow');
+        }
+    })
     return(
         <nav>
+            <div className="scrollTitle">
+                <NavLink 
+                to="/">
+                    <p>sizzze | store</p>
+                </NavLink>
+            </div>
+            
         <ul className="pageNav">
         <li>
             <NavLink 
@@ -34,7 +55,7 @@ render(){
             Main
             </NavLink>
         </li>
-        <li>
+        <li className="secondLi">
             <NavLink 
                 to="/store" 
                 className="pagelink">

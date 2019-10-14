@@ -113,7 +113,9 @@ export default class SimpleSlider extends Component {
             <div className="blockInSlider"
             onMouseEnter= {() => this.toggleList(isImgHover)}
             onMouseLeave={() => this.toggleList(!isImgHover)}>
-             <TransitionGroup>
+              <div>
+
+              <TransitionGroup>
                     {isImgHover && (
 
                     <CSSTransition
@@ -122,7 +124,7 @@ export default class SimpleSlider extends Component {
                       exit:0
                       }} 
                         classNames="showImg">
-                          <img src={img101} alt="" style={{height:"315px"}}/> 
+                          <img src={img101} alt="" style={{height:"219.59px"}}/> 
                           </CSSTransition>    
                     )}
   
@@ -138,6 +140,9 @@ export default class SimpleSlider extends Component {
                           </CSSTransition>    
                     )}
                   </TransitionGroup>
+
+              </div>
+             
 
               <div className="infoSlider">
                 <h3>Ugg Neumel Black</h3>

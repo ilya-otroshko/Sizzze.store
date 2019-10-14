@@ -1,24 +1,80 @@
-
-///////////////////////////////HEADER////////////////////////////////////
-
-
-
+/////////////////////////////////  . HEADER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 h1{
     font-size: 70px;
     text-align: center;
   }
-  .pageNav
-  {
+
+  nav{
+    background: white;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navScroll{
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+  }
+  .liScroll{
+    margin: 0!important;
+  }
+  .scrollTitle{
+    position: absolute;
+    left: 2%;
+    transition: opacity .3s, 
+                transform .4s;
+    opacity: 0;
+    transform: translateY(-20px);
+    a{
+      color: black;
+      text-decoration: none;
+      p{
+        margin: 0;
+      }
+    }
+      
+    }
+    .scrollTitleShow{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    .scrollTitleShow:after {
+      display: block;
+      position: absolute;
+      left: 50%; 
+      transform: translateX(-50%); 
+      width: 0;
+      height: 1px;
+      background-color: #d298ff; 
+      content: "";
+      transition: width 0.3s ease-out;
+    }
+    
+    .scrollTitleShow:hover:after,
+    .scrollTitleShow:focus:after {
+      width: 100%;
+      height: 3px;
+    }
+
+  .pageNav{
     list-style: none;
     display: flex;
     justify-content: center;
     position: relative;
     margin-bottom: 0;
+    padding: 0;
+    .secondLi{
+      margin: 0px 20px;
+      transition: margin 1s;
+    }
       li{
-        padding-bottom: 15px;
         .pagelink,
         .pagelink:hover,
         .pagelink:focus{
+            padding: 20px 0px;
             margin:10px 20px;
             color: grey;
             outline: none;
@@ -72,7 +128,9 @@ h1{
       }
   .brandsNav
         {
-          margin-top: 15px;
+          padding-top: 10px;
+          width: 80%;
+          margin-top: 19.9px;
           list-style: none;
           background:  rgba(255, 255,255, .8);
           box-shadow: 0px 0px 7px 1px #00000026;
@@ -110,6 +168,34 @@ h1{
 .showBrandsNav-exit-active {
   animation: showList 500ms alternate-reverse;
 }
+    .insta{
+      cursor: pointer;
+      position: absolute;
+      top: 11%;
+      left: 35%;
+      display: flex;
+      justify-content: center;
+      height: 20px;
+      width: 25px;
+      background: white;
+      font-size: 20px;
+      svg{
+        margin-bottom: 10px;
+        top: 0px;
+        position: absolute;
+        color: black;
+        transition: transform .5s,
+                    color .6s;
+      }
+    }
+    .insta:hover{
+      svg{
+        transform: rotate(360deg);
+        color: #d298ff;
+      }
+    }
+  
+
 
 @keyframes showList
 {
@@ -126,5 +212,4 @@ h1{
     transform: translateY(0px)
   }
 }
-  
-  ///////////////////////////////END HEADER////////////////////////////////////
+/////////////////////////////////  . HEADER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  

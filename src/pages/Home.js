@@ -1,13 +1,17 @@
 import React from 'react'
 
 import ChooseBrand from '../components/home/ChooseBrand'
-import NewItems from '../components/home/NewItems'
+import NewSlider from '../components/home/NewSlider'
+import Sale from '../components/home/Sale'
+import NewArrivals from '../components/home/NewArrivals'
 
 export default function Home(){
   return (
       <div>     
       <ChooseBrand />
-      <NewItems />
+      <NewSlider />
+      <Sale />
+      <NewArrivals />
       </div>
 
   )

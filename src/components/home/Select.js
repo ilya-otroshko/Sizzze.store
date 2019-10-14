@@ -123,7 +123,7 @@ export default class Select extends Component {
                                  borderBottomLeftRadius: "5px",
                                  borderBottomRightRadius: "5px",
                                  marginTop: "-5px",
-                                 height: '200px', 
+                                 height: '170%', 
                                  position: 'absolute', 
                                  width: '90%'
                                  }}> 
@@ -186,7 +186,7 @@ export default class Select extends Component {
                                  borderBottomLeftRadius: "5px",
                                  borderBottomRightRadius: "5px",
                                  marginTop: "-5px",
-                                 height: '200px', 
+                                 height: '170%', 
                                  position: 'absolute', 
                                  width: '90%'
                                  }}> 
