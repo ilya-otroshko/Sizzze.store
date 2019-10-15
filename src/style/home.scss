@@ -37,8 +37,8 @@
                   .iconInput{
                     width: fit-content;
                     position: absolute;
-                    right: 40px;
-                    top: 50px;
+                    right: 15%;
+                    top: 60%;
                     transition: .4s;
                   }
 
@@ -130,7 +130,6 @@
   width: 95%;
   margin: 0 auto;
   cursor: grab;
-  margin-bottom: 100px;
   .slick-list{
     width: 100%;
     margin: 0 auto;
@@ -138,9 +137,7 @@
   .blockInSlider{
     width: 90%;
     margin: 0 auto;
-    overflow: hidden;
     border-radius: 5px;
-    margin-top: 5px;
     cursor: pointer;
     transition: box-shadow .2s;
     img{
@@ -148,7 +145,19 @@
     }
   }
   .blockInSlider:hover{
-    box-shadow: 0px 0px 7px 1px #00000026;
+    -webkit-box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
+    -moz-box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
+    box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
+
+    .infoSlider{
+      h3{
+        transform: translateY(-10px);
+      }
+      p{
+        opacity:0;
+        transform: translateY(-20px);
+      }
+    }
   }
    
 }
@@ -194,10 +203,13 @@
   h3{
     font-weight: bold;
     font-size: 20px;
+    transition: transform .4s;
   }
   p{
     font-weight: bold;
     color: #d298ff;
+    transition: transform .4s,
+                opacity .6s;
   }
   span{
     font-size: 13px;  
@@ -205,40 +217,23 @@
 }
 
 .showImg-enter-active{
-  animation: fade 200ms;
+  animation: fade 100ms forwards;
 }
 
 .showImg-exit-active{
-  position: absolute;
-  opacity: 0;
+  animation: fade 100ms alternate-reverse;
 }
 
 @keyframes fade
 {
-  0%{
-    opacity: 0;
-
-  }
-  25%{
-      opacity: 0;
-
-  }
-  50%{
-      opacity: .5;
-
-  }
-  75%{
-    opacity: .75;
-
-  }
-  100%{
-    opacity: 1; 
-  }
+from{ opacity: 0;}
+to { opacity: 1;}
 }
 
 .slick-track 
 {
   display: flex;
+  padding-bottom: 80px;
 }
 
 /////////////////////////////////  . NEW SLIDER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -326,7 +321,7 @@
     width: 50%;
     position: relative;
     height: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
       div{
@@ -364,9 +359,16 @@
   }
   .rightArrivals{
     float: right;
+    animation: rigthBlockShow 1s;
+  }
+  .leftArrivals{
+    animation: truckRoll 1s;
   }
 }
 
-
+@keyframes rigthBlockShow{
+  from {transform:translateX(500px);}
+  to {transform: translateX(0px);}
+}
 
 /////////////////////////////////  . NEW ARRIVALS . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

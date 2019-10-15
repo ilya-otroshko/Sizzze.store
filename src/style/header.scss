@@ -2,6 +2,7 @@
 h1{
     font-size: 70px;
     text-align: center;
+    margin: 10px 0px 0px 0px;
   }
 
   nav{
@@ -74,7 +75,7 @@ h1{
         .pagelink,
         .pagelink:hover,
         .pagelink:focus{
-            padding: 20px 0px;
+            padding: 25px 0px;
             margin:10px 20px;
             color: grey;
             outline: none;
@@ -130,7 +131,7 @@ h1{
         {
           padding-top: 10px;
           width: 80%;
-          margin-top: 19.9px;
+          margin-top: 20px;
           list-style: none;
           background:  rgba(255, 255,255, .8);
           box-shadow: 0px 0px 7px 1px #00000026;
@@ -168,33 +169,38 @@ h1{
 .showBrandsNav-exit-active {
   animation: showList 500ms alternate-reverse;
 }
-    .insta{
-      cursor: pointer;
-      position: absolute;
-      top: 11%;
-      left: 35%;
-      display: flex;
-      justify-content: center;
-      height: 20px;
-      width: 25px;
-      background: white;
-      font-size: 20px;
-      svg{
-        margin-bottom: 10px;
-        top: 0px;
+  .insta{ 
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    width: -moz-fit-content;
+      div{
+        cursor: pointer;
         position: absolute;
-        color: black;
-        transition: transform .5s,
-                    color .6s;
-      }
+        top: -2%;
+        left: 8.7%;
+        display: flex;
+        justify-content: center;
+        height: 19px;
+        width: 19px;
+        background: white;
+        font-size: 18px;
+        align-items: center;
+          svg{
+            color: black;
+            transition: transform .5s,
+                        color .6s;
+            animation: instaHover 1s alternate-reverse;
+          }
     }
-    .insta:hover{
+    div:hover{
       svg{
         transform: rotate(360deg);
         color: #d298ff;
       }
     }
-  
+  }
+   
 
 
 @keyframes showList
@@ -211,5 +217,12 @@ h1{
     opacity: 1;
     transform: translateY(0px)
   }
+}
+
+@keyframes instaHover{
+  from { transform: rotate(0deg);
+        color: black;}
+  to { transform: rotate(360deg);
+        color: #d298ff;}
 }
 /////////////////////////////////  . HEADER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  

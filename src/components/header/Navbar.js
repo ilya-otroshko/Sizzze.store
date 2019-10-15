@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
-
 class Navbar extends Component {
 
     state = {
@@ -28,7 +27,7 @@ render(){
     window.addEventListener('scroll', function(){
 
         if(this.window.pageYOffset > 90){
-           document.getElementsByTagName('nav')[0].classList.add('navScroll');
+           this.document.getElementsByTagName('nav')[0].classList.add('navScroll');
            document.getElementsByTagName('li')[1].classList.add('liScroll');
            document.getElementsByClassName('scrollTitle')[0].classList.add('scrollTitleShow');
         }
@@ -45,6 +44,7 @@ render(){
                 to="/">
                     <p>sizzze | store</p>
                 </NavLink>
+               
             </div>
             
         <ul className="pageNav">

@@ -3,18 +3,12 @@ import Slider from "react-slick";
 import {CSSTransition,TransitionGroup,} from 'react-transition-group';
 
 import img1 from '../../images/1.png'
-import img101 from '../../images/1.1.jpg'
+import img101 from '../../images/1.1.png'
 import img2 from '../../images/2.png'
-// import img202 from '../../images/2.2.jpg'
 import img3 from '../../images/3.png'
-// import img303 from '../../images/3.3.jpg'
-import img4 from '../../images/4.jpg'
-// import img404 from '../../images/4.4.jpg'
 import img5 from '../../images/5.png'
-// import img505 from '../../images/5.5.jpg'
 import img6 from '../../images/6.png'
 import img7 from '../../images/7.png'
-import img8 from '../../images/8.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -66,11 +60,14 @@ export default class SimpleSlider extends Component {
         isImgHover: !this.state.isImgHover
       });
   }; 
-
+ 
   render() {
-    console.log(this.state.isImgHover)
+
+   
     const { isImgHover } = this.state;
+   
     const settings = {
+      
       infinite: true,
       speed: 400,
       slidesToShow: 5,
@@ -109,28 +106,28 @@ export default class SimpleSlider extends Component {
     return (
       <div className="slickSlider">
         <Slider {...settings}>
-          <div>
-            <div className="blockInSlider"
-            onMouseEnter= {() => this.toggleList(isImgHover)}
-            onMouseLeave={() => this.toggleList(!isImgHover)}>
+          <div
+           onMouseEnter= {() => this.toggleList(isImgHover)}
+           onMouseLeave={() => this.toggleList(!isImgHover)}>
+            <div className="blockInSlider">
               <div>
 
               <TransitionGroup>
-                    {isImgHover && (
-
+                    {/* {isImgHover && ( */}
+                      
                     <CSSTransition
                     timeout={{
                       enter:200,
                       exit:0
                       }} 
                         classNames="showImg">
-                          <img src={img101} alt="" style={{height:"219.59px"}}/> 
+                          <img src={img1} alt=""/> 
                           </CSSTransition>    
-                    )}
+                    {/* )} */}
   
-                    {!isImgHover && (
+                    {/* {!isImgHover && ( */}
 
-                    <CSSTransition
+                    {/* <CSSTransition
                         timeout={{
                           enter:200,
                           exit:0
@@ -138,7 +135,7 @@ export default class SimpleSlider extends Component {
                         classNames="showImg">
                           <img src={img1} alt=""/> 
                           </CSSTransition>    
-                    )}
+                    // )} */}
                   </TransitionGroup>
 
               </div>
@@ -172,7 +169,7 @@ export default class SimpleSlider extends Component {
 
           <div>
             <div className="blockInSlider">
-              <img src={img4} alt=""/>
+              <img src={img6} alt=""/>
               <div>
                 <h3>hello</h3>
               </div>
@@ -208,7 +205,7 @@ export default class SimpleSlider extends Component {
 
           <div>
             <div className="blockInSlider">
-              <img src={img8} alt=""/>
+              <img src={img6} alt=""/>
               <div>
                 <h3>hello</h3>
               </div>

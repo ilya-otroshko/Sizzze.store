@@ -1,0 +1,75 @@
+.footer{
+    height: 350px;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: footerShow 1s;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+        div{
+            position: absolute;
+            height: 50%;
+            width: 16%;
+            animation-name: truck, truckRoll;
+            animation-duration: .5s, 5s;
+            animation-iteration-count: infinite, 1;
+            svg:first-child{
+                color: #8a8a8a;
+                height: 100%;
+                width: 100%;
+            }
+            svg:nth-child(2),
+            svg:nth-child(3),
+            svg:nth-child(4){
+                font-size: 58px;
+                color: black;
+                position: absolute;
+                top: 62%;
+                background: #8a8a8a;
+                padding: 0;
+                margin: 0;
+                border-radius: 25%;
+                animation: roll 1s linear infinite;
+
+            }
+            svg:nth-child(2){
+                left: 23%;
+                cursor: pointer;
+            }
+            svg:nth-child(3){
+                right: 23%;
+                cursor: pointer;
+            }
+            svg:nth-child(4){
+                background: none;
+                left: 25%;
+                top: 20%;
+                animation: none;
+            }
+        }
+}
+
+
+@keyframes roll {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes truck {
+    from {transform: skewY(1deg);}
+    to {transform: skewY(-1deg);}
+}
+
+@keyframes truckRoll {
+    from {transform:translateX(-500px);}
+    to {transform: translateX(0px);}
+}
+@keyframes footerShow {
+    from {transform: translateY(500px);}
+    to {transform: translateY(0px);}
+}
