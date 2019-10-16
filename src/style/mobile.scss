@@ -1,0 +1,20 @@
+@media screen and (max-width: 530px){
+    .insta{
+        h1{
+            font-size: 40px;
+        }
+        div{
+            top: -9%;
+            left: 7.9%;
+            font-size: 15px;
+            width: 15px;
+            height: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .headerPC{display: none;}
+    .headerMob{display: flex;}
+
+}

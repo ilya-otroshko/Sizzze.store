@@ -1,3 +1,5 @@
+    /////////////////////////////////  . SIDEBAR . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 .store{
     display: flex;
     flex-direction: column;
@@ -8,53 +10,148 @@
     .sidebar{
         width: 25%;
         height: 1000px;
+        /////////////////////  . PRICE RANGE . \\\\\\\\\\\\\\\\\\
         .priceRange{
-            .input-range__label{
+            display: flex;
+            flex-direction: column;
+            p{
+                font-size: 20px;
+                color: gray;
+                margin: 15px 0px;
+            }
+            .input-range{
+                width: 95%;
+                margin: 0 auto;
+                .input-range__label{
+                    display: none;
+                }
+                .input-range__track--active{
+                    background: #e9cbff;
+                }
+                .input-range__slider {
+                    background: #d298ff;
+                    border: 1px solid #d298ff;
+                    height: 1.2rem;
+                    width: 1.2rem;
+                    margin-top: -0.76rem;
+                    cursor: col-resize;
+                }
+                .input-range__slider:active{   
+                    transform: scale(1.5);
+                    background: white;
+                    border: 2px solid #d298ff;
+                }
+            }
+        } 
+        /////////////////////  . PRICE RANGE . \\\\\\\\\\\\\\\\\\
+        .sizeFilter{
+            position: relative;
+            display: flex;
+            width: 100%;
+            form{
+                width: 100%;
+            }
+            .modelSelect{
                 display: none;
             }
-            .input-range__track--active{
-                background: #e9cbff;
+            .brandSelect{
+              position: relative;
             }
-            .input-range__slider {
-                background: #d298ff;
-                border: 1px solid #d298ff;
-                height: 1.2rem;
-                width: 1.2rem;
-                margin-top: -0.76rem;
-                cursor: col-resize;
-    
-    
+            .iconInput{
+              width: fit-content;
+              position: absolute;
+              right: 15%;
+              top: 60%;
+              transition: .4s;
             }
-            .input-range__slider:active{   
-                transform: scale(1.5);
-                background: white;
-                border: 2px solid #d298ff;
+
+          p{
+            color: gray;
+            font-weight: 400;
+            font-size: 20px;
+          }
+          input{
+                cursor: pointer;
+                padding: 10px;
+                outline: none;
+            }
+            .mainInput{
+              border: 1px solid #ffffff8c;
+                width: 90%;
+                border-radius: 5px;
+                background:#e9cbff;
+                transition: .4s;
+            }
+            .mainInput:hover{
+              color: white;         
+            }
+            .mainInput:hover ~ .iconInput{ 
+              color: white!important;
             }
         }
+        button{
+            display: none;
+        }
+
+    .brandsName{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        input{
+            border: none;
+        }
+        input:hover
+        {
+            background:rgb(241, 241, 241);
+            color: rgb(193, 193, 193);
+        }
     }
+
+.showBrandsName-enter-active {
+    animation: fade 200ms;
+  }
+
+.showBrandsName-exit-active {
+    animation: fade 200ms alternate-reverse;
+  }
+}
+    /////////////////////////////////  . SIDEBAR . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+    /////////////////////////////////  . PRODUCTS LIST . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     .barAndProducts{
         display: flex;
         justify-content: space-between;
         .productsList{
             width: 70%;
+            padding: 10px;
             ul{
                 padding: 0;
                 display: grid;
                 grid-template-columns: 33% 33% 33%;
-                .productsCart{
-                    list-style: none;
-                    width: 100%;
-                .productsCart:hover{
-
-                    }
-                    img{
+                a{
+                    color: black;
+                    text-decoration: none;
+                    .productsCard{
+                        list-style: none;
                         width: 100%;
+                        padding: 10px;
+                        .cardBlock{
+                            transition: box-shadow 1s;
+                        }
+                        .cardBlock:hover{
+                            box-shadow: 0 0 13px black;
+                        }
+                        img{
+                            width: 100%;
+                        }
                     }
                 }
+                
             }
-            }
-        
-        }
-        
-
+        }   
+     }
 }
+    /////////////////////////////////  . PRODUCTS LIST . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

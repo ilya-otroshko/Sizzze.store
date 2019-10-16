@@ -1,30 +1,26 @@
-import React, {Fragment} from 'react'
+import React,{Component} from 'react'
 
-import Navbar from './Navbar'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import HeaderPC from './HeaderPC';
+import HeaderMob from './HeaderMob';
 
-export const Header = () => {
-  return (
-    <Fragment>
+export default class Header extends Component {
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+    
+    };
+  }
+ 
+  render() {
 
-        <div style={{height:'148px'}}>
+    return (
+      <div>
+      <HeaderMob />
+      <HeaderPC />
+      </div>
 
-        <div className="insta">
-        <div onClick={() => { 
-                window.location.href = 'https://www.instagram.com/sizzze.store';return null;
-              }}>
-            <FontAwesomeIcon
-            icon={faInstagram}
-            />
-            </div>
-            
-          <h1>sizzze | store</h1>
-        </div>
-        
-        <Navbar />
-        </div>
-
-    </Fragment>
-  )
+    )
+  }
 }
+

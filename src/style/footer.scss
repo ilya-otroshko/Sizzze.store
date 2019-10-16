@@ -1,7 +1,7 @@
 .footer{
     height: 350px;
     position: relative;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     animation: footerShow 1s;
@@ -14,7 +14,7 @@
         div{
             position: absolute;
             height: 50%;
-            width: 16%;
+            width: 300px;
             animation-name: truck, truckRoll;
             animation-duration: .5s, 5s;
             animation-iteration-count: infinite, 1;
@@ -26,10 +26,10 @@
             svg:nth-child(2),
             svg:nth-child(3),
             svg:nth-child(4){
-                font-size: 58px;
+                font-size: 250%;
                 color: black;
                 position: absolute;
-                top: 62%;
+                top: 70%;
                 background: #8a8a8a;
                 padding: 0;
                 margin: 0;
@@ -38,11 +38,11 @@
 
             }
             svg:nth-child(2){
-                left: 23%;
+                left: 26%;
                 cursor: pointer;
             }
             svg:nth-child(3){
-                right: 23%;
+                right: 26%;
                 cursor: pointer;
             }
             svg:nth-child(4){

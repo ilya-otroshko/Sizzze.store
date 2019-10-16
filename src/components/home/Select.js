@@ -83,7 +83,6 @@ export default class Select extends Component {
             // eslint-disable-next-line
             let scroll = {width: client - scrollWidth}
         }
-        
       return (
         
         <form>
@@ -94,7 +93,7 @@ export default class Select extends Component {
                         }}
                         >
                 <div className="brandSelect">
-                    <p>Brands:</p>  
+                    <p>{this.props.title1}</p>  
                     <input 
                     type="text" 
                     value={this.state.brandValue} 
@@ -130,20 +129,16 @@ export default class Select extends Component {
                                 <div className="wrapperBrandsName"
                                 ref={this.myRef}
                                 style={scroll}>
-                    <div className="brandsName"
->
-                        <input type="text" value="all" readOnly
-                        onClick={this.handleChangeBrand}/>
-                        <input type="text" value="adidas" readOnly  
-                        onClick={this.handleChangeBrand}/>
-                        <input type="text" value="nike" readOnly 
-                        onClick={this.handleChangeBrand}/>
-                        <input type="text" value="puma" readOnly
-                        onClick={this.handleChangeBrand} />
-                        <input type="text" value="reebok" readOnly
-                        onClick={this.handleChangeBrand} />
-                        <input type="text" value="new-balance" readOnly
-                        onClick={this.handleChangeBrand} />
+                    <div className="brandsName">
+                        {this.props.brandName.map(input =>
+                            <input 
+                            type="text" 
+                            value={input.value[input.id]} 
+                            readOnly
+                            onClick={this.handleChangeBrand}
+                            key={input.id}
+                            />
+                            )}
                     </div>
                     </div>
                     </Scrollbars> 
@@ -159,7 +154,7 @@ export default class Select extends Component {
                         }}
                         >
                 <div className="modelSelect">
-                <p>Models:</p>  
+                <p>{this.props.title2}</p>  
                 <input 
                 type="text" 
                 value={this.state.modelValue} 
@@ -195,18 +190,15 @@ export default class Select extends Component {
                               style={scroll}>
 
                 <div className="brandsName">
-                    <input type="text" value="all" 
-                    readOnly onClick={this.handleChangeModel}/>
-                    <input type="text" value="adidas" 
-                    readOnly onClick={this.handleChangeModel}/>
-                    <input type="text" value="nike"
-                     readOnly  onClick={this.handleChangeModel}/>
-                    <input type="text" value="puma" 
-                    readOnly onClick={this.handleChangeModel} />
-                    <input type="text" value="reebok" 
-                    readOnly onClick={this.handleChangeModel} />
-                    <input type="text" value="new-balance" 
-                    readOnly onClick={this.handleChangeModel} />
+                {this.props.modelName.map(input =>
+                            <input 
+                            type="text" 
+                            value={input.value[input.id]} 
+                            readOnly
+                            onClick={this.handleChangeModel}
+                            key={input.id}
+                            />
+                            )}
                 </div>
                 </div>
                 </Scrollbars> 

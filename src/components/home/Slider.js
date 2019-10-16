@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import {CSSTransition,TransitionGroup,} from 'react-transition-group';
 
 import img1 from '../../images/1.png'
-import img101 from '../../images/1.1.png'
 import img2 from '../../images/2.png'
 import img3 from '../../images/3.png'
 import img5 from '../../images/5.png'

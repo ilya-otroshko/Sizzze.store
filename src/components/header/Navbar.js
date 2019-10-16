@@ -25,20 +25,20 @@ render(){
     const { isListVisible } = this.state;
     
     window.addEventListener('scroll', function(){
-
+        console.log()
         if(this.window.pageYOffset > 90){
-           this.document.getElementsByTagName('nav')[0].classList.add('navScroll');
+           this.document.getElementsByClassName('nav')[0].classList.add('navScroll');
            document.getElementsByTagName('li')[1].classList.add('liScroll');
            document.getElementsByClassName('scrollTitle')[0].classList.add('scrollTitleShow');
         }
         if(this.window.pageYOffset < 90){
-            document.getElementsByTagName('nav')[0].classList.remove('navScroll');
+            document.getElementsByClassName('nav')[0].classList.remove('navScroll');
             document.getElementsByTagName('li')[1].classList.remove('liScroll');
             document.getElementsByClassName('scrollTitle')[0].classList.remove('scrollTitleShow');
         }
     })
     return(
-        <nav>
+        <nav className="nav">
             <div className="scrollTitle">
                 <NavLink 
                 to="/">
