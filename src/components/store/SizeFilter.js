@@ -20,7 +20,10 @@ export default class SizeFilter extends Component {
 
             <Select 
             brandName={size}
-            title1={'Size'}/>
+            title1={'Size'}
+            colorIcon={'black'}
+            bg1={'black'}
+            bg2={'#e9cbff'}/>
 
         </div>
     );

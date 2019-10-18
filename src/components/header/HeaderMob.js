@@ -41,6 +41,13 @@ export default class HeaderMob extends Component {
   scroll(){
     window.scrollTo(0,0)
     document.getElementsByTagName('html')[0].classList.add('no-scroll')
+    document.getElementById('outer-container').classList.add('no-scroll')
+
+  }
+  noScroll(){
+    document.getElementById('outer-container').classList.remove('no-scroll')
+    document.getElementsByTagName('html')[0].classList.remove('no-scroll')
+
   }
   render() {
     this.state.menuOpen ?
@@ -49,20 +56,27 @@ export default class HeaderMob extends Component {
     )
     :
     (
-      document.getElementsByTagName('html')[0].classList.remove('no-scroll')
+      this.noScroll()
     )
     const { isListVisible } = this.state;
     return (
 
+
+      <div className="showHeaderMob">
+      <div className="wrapperMob"></div>
+
       <div className="headerMob">
-              <FontAwesomeIcon
+             
+              <div className="insta">
+                <div>
+                <FontAwesomeIcon
               className="instaIcon"
             icon={faInstagram}
             onClick={() => { 
               window.location.href = 'https://www.instagram.com/sizzze.store';return null;
             }}/>
-              <div className="insta">
-            
+                </div>
+              
           <h1>sizzze | store</h1>
         </div>
       <Menu
@@ -120,6 +134,7 @@ export default class HeaderMob extends Component {
         </ul>
         </OutsideClickHandler>
     </Menu> 
+    </div>
     </div>
     )
   } 

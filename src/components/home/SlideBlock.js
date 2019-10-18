@@ -1,18 +1,30 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 
-
-export const SlideBlock = ({blocks}) => {
+export default function SlideBlock(props){
     
     return (
-        <div>
-            {blocks.map(block =>(
 
+        props.blocks.map(block =>(
+            <NavLink
+            to={`/products/${props.count}`}
+            key={props.count}
+            >
+            <div>
+                <div className="blockInSlider">
+                    <img src={require(`../../images/${props.count}.png`)} alt=""/>
 
-            <div className="blockInSlider"
-            key={block.id}>
-            <img src={require(`../../images/${block.src}.png`)} alt=""/>
-              </div>
-            ))}
-        </div>
+                <div className="infoSlider">
+                    <h3>{props.name}</h3>
+                    <p>{props.price}uah</p>
+                    <span>In stok: {props.stok.join(', ')}</span>
+                </div>
+
+                </div>
+            </div>
+            </NavLink>
+        ))
     )
-} 
+  } 
+      
+      

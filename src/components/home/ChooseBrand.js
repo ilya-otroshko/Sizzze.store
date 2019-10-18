@@ -5,6 +5,20 @@ import fon from '../../images/fon.jpg'
 
 
 export default function ChooseBrand(){
+  console.log(document.getElementsByClassName('leftArrivals').length)
+  window.addEventListener('scroll', function(){
+    document.getElementsByClassName('footer')[0].style.display="flex"
+    if(document.getElementsByClassName('leftArrivals').length > 0){
+      if(window.pageYOffset > 1002){
+        document.getElementsByClassName('footer')[0].style.display="flex"
+        document.getElementsByClassName('leftArrivals')[0].style.display="flex"
+        document.getElementsByClassName('rightArrivals')[0].style.display="flex"
+      }
+      if(window.pageYOffset < 1002){
+        document.getElementsByClassName('footer')[0].style.display="none"
+      }
+    }
+})
   const brandName = new Array(6)
   .fill('')
   .map( (_, i) => ( {id:i, value:["all", "adidas", "nike", "puma", "reebok", "new-balance"]} ) )
@@ -21,7 +35,10 @@ export default function ChooseBrand(){
             brandName={brandName}
             modelName={modelName}
             title1={"Brands: "}
-            title2={"Models: "}/>
+            title2={"Models: "}
+            colorIcon={"white"}
+            bg1={'rgba(255, 255, 255, 0.6)'}
+            bg2={'rgba(255, 255, 255, 0.6)'}/>
       </section>
     </div>
     
