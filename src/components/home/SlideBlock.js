@@ -12,7 +12,7 @@ export default function SlideBlock(props){
             >
             <div>
                 <div className="blockInSlider">
-                    <img src={require(`../../images/${props.count}.png`)} alt=""/>
+                    <img src={require(`../../images/${props.count}.jpeg`)} alt=""/>
 
                 <div className="infoSlider">
                     <h3>{props.name}</h3>

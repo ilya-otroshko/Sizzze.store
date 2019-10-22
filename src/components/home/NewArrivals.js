@@ -1,8 +1,8 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-import left from '../../images/left.jpg'
-import right from '../../images/right.jpg'
+import left from '../../images/left.jpeg'
+import right from '../../images/right.jpeg'
 
 export default function NewArrivals(){
   return (

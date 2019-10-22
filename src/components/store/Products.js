@@ -15,7 +15,7 @@ export default function Store(props){
             <li className="productsCard">
               <div className="cardBlock">
                 <div>
-                      <img src={require(`../../images/${block.id}.png`)} alt=""/>
+                      <img src={require(`../../images/${block.id}.jpeg`)} alt=""/>
                 </div>
                 <div className="infoSlider">
                     <h3>{props.name}</h3>

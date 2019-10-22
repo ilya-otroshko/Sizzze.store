@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import img from '../../images/footer.jpg'
+import img from '../../images/footer.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faTruck } from '@fortawesome/free-solid-svg-icons'
