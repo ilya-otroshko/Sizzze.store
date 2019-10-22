@@ -1,7 +1,7 @@
 import React from 'react';
 import StoreHeader from '../components/store/StoreHeader';
 import Sidebar from '../components/store/Sidebar';
-import Products from '../components/store/Products';
+import Products from '../components/store/ProductsList';
 
 
 
