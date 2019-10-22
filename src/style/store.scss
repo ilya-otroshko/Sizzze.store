@@ -14,9 +14,12 @@
         .priceRange{
             display: flex;
             flex-direction: column;
-            p{
+            p:first-child{
                 font-size: 20px;
                 color: gray;
+                margin: 15px 0px;
+            }
+            p:last-child{
                 margin: 15px 0px;
             }
             .input-range{
@@ -43,6 +46,10 @@
             }
         } 
         /////////////////////  . PRICE RANGE . \\\\\\\\\\\\\\\\\\
+
+
+        ////////////////////////  . SIZE FILTER . \\\\\\\\\\\\\\\\\\
+
         .sizeFilter{
             position: relative;
             display: flex;
@@ -55,6 +62,12 @@
             }
             .brandSelect{
               position: relative;
+              .showBrandsName-enter-active,
+              .showBrandsName-enter-done{
+                z-index: 10;
+                box-shadow: 0px 6px 15px -6px rgba(0,0,0,0.75);
+                height: 200%;
+              }
             }
             .iconInput{
               width: fit-content;
@@ -73,16 +86,18 @@
                 cursor: pointer;
                 padding: 10px;
                 outline: none;
+                background: white;
             }
             .mainInput{
               border: 1px solid #19181838;
                 width: 90%;
                 border-radius: 5px;
                 transition: .4s;
+                background: #e9cbff;
             }
             .mainInput:hover{
               color: black;  
-              background: #e9cbff;       
+              background: #d298ff;       
             }
             .mainInput:hover ~ .iconInput{ 
               color: black!important;
@@ -108,13 +123,118 @@
     }
 
 .showBrandsName-enter-active {
-    animation: fade 200ms;
+    // animation: fade 300ms;
   }
 
 .showBrandsName-exit-active {
-    animation: fade 200ms alternate-reverse;
+    // animation: fade 300ms alternate-reverse;
   }
 }
+
+        ////////////////////////  . SIZE FILTER . \\\\\\\\\\\\\\\\\\
+
+
+
+        ////////////////////////  . COLOR FILTER . \\\\\\\\\\\\\\\\\\
+
+
+        .colorFilter{
+            width: 90%;
+            height: 150px;
+            p{
+                font-size: 20px;
+                color: gray;
+                margin: 15px 0px;
+            }
+            ul{
+                padding: 0;
+                list-style: none;
+                li{
+                    float: left;
+                    width: 15%;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px;  
+                    a{
+                        border-radius: 50%;
+                        padding: 15px;
+                        box-shadow: 0 0 3px 1px black;
+                        transition: transform .4s;
+                    }
+                    a:hover{
+                        transform: rotate3d(1, 1, 1, 360deg)
+                    }
+                }
+            }
+        }
+
+        ////////////////////////  . CCOLOR FILTER . \\\\\\\\\\\\\\\\\\
+
+        ////////////////////////  . GENDER FILTER . \\\\\\\\\\\\\\\\\\
+
+        .gender{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            div{
+                .checkbox {
+                    position: absolute;
+                    z-index: -1;
+                    opacity: 0;
+                    margin: 10px 0 0 20px;
+                }
+                .checkbox + label {
+                    position: relative;
+                    padding: 0 0 0 60px;
+                    cursor: pointer;
+                }
+                .checkbox + label:before {
+                    content: '';
+                    position: absolute;
+                    top: -4px;
+                    left: 0;
+                    width: 50px;
+                    height: 26px;
+                    border-radius: 13px;
+                    background: #CDD1DA;
+                    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+                    transition: .2s;
+                }
+                .checkbox + label:after {
+                    content: '';
+                    position: absolute;
+                    top: -2px;
+                    left: 2px;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+                    transition: .2s;
+                }
+                .checkbox:checked + label:before {
+                    background: #d298ff;
+                }
+                .checkbox:checked + label:after {
+                    left: 26px;
+                }
+                .checkbox:focus + label:before {
+                    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px #e9cbff;
+                }
+            }
+            p{
+                font-size: 20px;
+                color: gray;
+                margin: 15px 0px;
+            }
+        }
+        
+        ////////////////////////  . GENDER FILTER . \\\\\\\\\\\\\\\\\\
+
+
+
     /////////////////////////////////  . SIDEBAR . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 

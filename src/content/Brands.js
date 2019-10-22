@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 
 class Brands extends Component  {
 
-      render(style){
+      render(){
 
   return (
 

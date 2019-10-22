@@ -23,7 +23,6 @@ export default class Select extends Component {
     handleChangeBrand(event) {
       this.setState({brandValue: event.target.value})
       this.clickOutBrand();
-      
     }
     handleChangeModel(event) {
         this.setState({modelValue: event.target.value})
@@ -43,13 +42,10 @@ export default class Select extends Component {
         this.state.isBrandListVisible ? 
         this.setState({
             transformIconBrand : 'none', 
-            colorBrand: ' ',
-            backgroundColor: this.props.bg1 }) 
+            colorBrand: ' ' }) 
             : 
         this.setState({
-           transformIconBrand : 'rotate(180deg)', 
-           colorBrand: this.props.colorIcon,
-           backgroundColor: this.props.bg2 })
+           transformIconBrand : 'rotate(180deg)'})
     }; 
 
     clickOutModel = () => {
@@ -103,13 +99,12 @@ export default class Select extends Component {
                 <div className="brandSelect">
                     <p>{this.props.title1}</p>  
                     <input 
+                    className="mainInput"
                     type="text" 
                     value={this.state.brandValue} 
                     readOnly
                     onClick= {() => this.brandToggleList(this.state.isBrandListVisible)}
-                    className="mainInput"
-                    style={{color: this.state.colorBrand,
-                            background: this.state.backgroundColor}}
+                    style={{color: this.state.colorBrand}}
                     
                     />
                     <div className="iconInput">

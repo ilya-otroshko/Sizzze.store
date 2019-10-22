@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import PriceRange from './PriceRange';
 import SizeFilter from './SizeFilter';
+import ColorFilter from './ColorFilter';
+import Gender from './Gender';
 
 export default class Sidebar extends Component {
   constructor(props) {
@@ -17,6 +19,8 @@ export default class Sidebar extends Component {
       <div className="sidebar">
         <PriceRange />
         <SizeFilter />
+        <ColorFilter />
+        <Gender />
       </div>
       
     );
