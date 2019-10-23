@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { faSlash } from '@fortawesome/free-solid-svg-icons'
 import SlideBlock from "./SlideBlock";
 
 
@@ -17,12 +16,6 @@ function SampleNextArrow(props) {
       <FontAwesomeIcon 
       icon={faChevronRight} 
       />
-      <div className="hoverNextIcon">       
-        <FontAwesomeIcon 
-      icon={faSlash} 
-      />
-      </div>
-
       </div>
     );
   }
@@ -42,17 +35,7 @@ function SampleNextArrow(props) {
 
 export default class SimpleSlider extends Component {
 
-  // state = {
-  //   isImgHover: false,
-  //   color: 'grey'
-  // };
 
-  // toggleList = () => {
-       
-  //     this.setState({
-  //       isImgHover: !this.state.isImgHover
-  //     });
-  // }; 
  
   render() {
     const counts = new Array(6)
@@ -63,8 +46,6 @@ export default class SimpleSlider extends Component {
     .fill('')
     .map( (_, i) => ( {id:i + 1} ) )
     const stok = [40, 41, 42, 43, 44]
-   
-    // const { isImgHover } = this.state;
    
     const settings = {
       

@@ -77,7 +77,10 @@ export default class HeaderMob extends Component {
             }}/>
                 </div>
               
-          <h1>sizzze | store</h1>
+                <NavLink 
+                to="/">
+                  <h1>sizzze | store</h1>
+                </NavLink>
         </div>
       <Menu
       pageWrapId = { "page-wrap" }

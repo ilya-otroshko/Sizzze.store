@@ -75,14 +75,14 @@ render(){
                 />
                 </NavLink>
                 <TransitionGroup>
-                    {isListVisible && (
+                {isListVisible && (
                         <CSSTransition 
                         classNames="showBrandsNav"
                         timeout={450}>
                         <Brands />
                         </CSSTransition>
                     )}
-                </TransitionGroup>
+                    </TransitionGroup>
             </li>
         </ul>
     </nav>

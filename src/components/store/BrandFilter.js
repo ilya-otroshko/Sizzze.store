@@ -8,27 +8,19 @@ export default class BrandFilter extends Component {
     super(props);
  
     this.state = {
+      brands: ["adidas", "nike", "puma", "reebok", "new-balance"]
     };
   }
  
   render() {
-    const brands = new Array(5)
-    .fill('')
-    .map( (_, i) => ( {id:i, 
-        value:["adidas", "nike", "puma", "reebok", "new-balance"]} ) ) 
     return (
         <div className="brandFilter">
           <p>Brand</p>
             <ul>
-            {brands.map(brand =>(
-                <li key={brand.id}>
-                <NavLink
-                to={`/${brand.value[brand.id]}`}>
-                
-                {brand.value[brand.id]}
-
-            </NavLink>
-                </li>
+            {this.state.brands.map((brand, index) =>(
+              <li key={'brand-' + index}>
+              <NavLink to={`/${brand}`}> {brand} </NavLink>
+              </li>
             ))}
             </ul>
         

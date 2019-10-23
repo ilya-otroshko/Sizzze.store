@@ -42,17 +42,21 @@ export default class Select extends Component {
         this.state.isBrandListVisible ? 
         this.setState({
             transformIconBrand : 'none', 
-            colorBrand: ' ' }) 
+            colorBrand: ' ',
+            bg: '' }) 
             : 
         this.setState({
-           transformIconBrand : 'rotate(180deg)'})
+           transformIconBrand : 'rotate(180deg)', 
+           colorBrand: 'white', 
+           bg: this.props.bg})
     }; 
 
     clickOutModel = () => {
         this.state.isModelListVisible && ( this.setState({
             isModelListVisible :false,
             transformIconModel : 'none', 
-            colorModel: ' '
+            colorModel: ' ',
+            bg2: ' '
         }) ) 
     }
 
@@ -60,7 +64,8 @@ export default class Select extends Component {
         this.state.isBrandListVisible && ( this.setState({
             isBrandListVisible :false,
             transformIconBrand : 'none', 
-            colorBrand: ' '
+            colorBrand: ' ',
+            bg: ' '
         }) ) 
     }
     modelToggleList = () => {
@@ -69,9 +74,13 @@ export default class Select extends Component {
             isModelListVisible: !this.state.isModelListVisible
         });
         this.state.isModelListVisible ? this.setState({
-            transformIconModel : 'none', colorModel: ' '
+            transformIconModel : 'none', 
+            colorModel: ' ',
+            bg2: ''
         }) : this.setState({
-           transformIconModel : 'rotate(180deg)', colorModel: 'white' })
+           transformIconModel : 'rotate(180deg)', 
+           colorModel: 'white',
+           bg2: this.props.bg })
     }; 
 
 
@@ -91,22 +100,23 @@ export default class Select extends Component {
         
         <form>
             <div className="selects">
-            <OutsideClickHandler
+            
+                <div className="brandSelect">
+                    <p>{this.props.title1}</p>  
+                    <OutsideClickHandler
                         onOutsideClick={() => {
                             this.clickOutBrand()
                         }}
                         >
-                <div className="brandSelect">
-                    <p>{this.props.title1}</p>  
                     <input 
                     className="mainInput"
                     type="text" 
                     value={this.state.brandValue} 
                     readOnly
                     onClick= {() => this.brandToggleList(this.state.isBrandListVisible)}
-                    style={{color: this.state.colorBrand}}
-                    
+                    style={{color: this.state.colorBrand, background: this.state.bg}}
                     />
+
                     <div className="iconInput">
                         <FontAwesomeIcon 
                         icon={faCaretDown} 
@@ -120,16 +130,8 @@ export default class Select extends Component {
                     <CSSTransition 
                             classNames="showBrandsName"
                             timeout={150}>
-                                <Scrollbars 
-                             style={{
-                                 border: "1px solid white",
-                                 borderBottomLeftRadius: "5px",
-                                 borderBottomRightRadius: "5px",
-                                 marginTop: "-5px",
-                                 height: '170%', 
-                                 position: 'absolute', 
-                                 width: '90%'
-                                 }}> 
+                                <Scrollbars
+                                className="scrollbarsClass"> 
                                 <div className="wrapperBrandsName"
                                 ref={this.myRef}
                                 style={scroll}>
@@ -137,7 +139,7 @@ export default class Select extends Component {
                         {this.props.brandName.map(input =>
                             <input 
                             type="text" 
-                            value={input.value[input.id]} 
+                            value={input.name} 
                             readOnly
                             onClick={this.handleChangeBrand}
                             key={input.id}
@@ -149,28 +151,32 @@ export default class Select extends Component {
                     </CSSTransition>
                         )}
             </TransitionGroup>
+            </OutsideClickHandler>
                 </div>
-                </OutsideClickHandler>
+                
+                
+                <div className="modelSelect">
+                <p>{this.props.title2}</p>  
                             
                 <OutsideClickHandler
                         onOutsideClick={() => {
                             this.clickOutModel()
                         }}
                         >
-                <div className="modelSelect">
-                <p>{this.props.title2}</p>  
                 <input 
                 type="text" 
                 value={this.state.modelValue} 
                 readOnly
                 onClick= {() => this.modelToggleList(this.state.isModelListVisible)}
                 className="mainInput"
-                style={{color: this.state.colorModel}}/>
+                style={{color: this.state.colorModel,
+                    background: this.state.bg2}}/>
                 <div className="iconInput">
                         <FontAwesomeIcon 
                         icon={faCaretDown} 
                         className="brandsIcon"
-                        style={{transform:this.state.transformIconModel, color: this.state.colorModel}}
+                        style={{transform:this.state.transformIconModel, 
+                        color: this.state.colorModel}}
                         />
                     </div>
                    
@@ -180,15 +186,7 @@ export default class Select extends Component {
                          classNames="showBrandsName"
                          timeout={150}>
                              <Scrollbars 
-                             style={{
-                                 border: "1px solid white",
-                                 borderBottomLeftRadius: "5px",
-                                 borderBottomRightRadius: "5px",
-                                 marginTop: "-5px",
-                                 height: '170%', 
-                                 position: 'absolute', 
-                                 width: '90%'
-                                 }}> 
+                            className="scrollbarsClass"> 
                              <div className="wrapperBrandsName"
                               ref={this.myRef}
                               style={scroll}>
@@ -197,7 +195,7 @@ export default class Select extends Component {
                 {this.props.modelName.map(input =>
                             <input 
                             type="text" 
-                            value={input.value[input.id]} 
+                            value={input.name} 
                             readOnly
                             onClick={this.handleChangeModel}
                             key={input.id}
@@ -209,12 +207,13 @@ export default class Select extends Component {
                 </CSSTransition>
                     )}
         </TransitionGroup>
-        
+        </OutsideClickHandler>
                 </div>
-                </OutsideClickHandler>
          </div>
+                    <div>
+                    <button type="button"  onClick={this.handleSubmit}>find</button>
 
-             <button type="button"  onClick={this.handleSubmit}>find</button>
+                    </div>
          
         </form>
       );

@@ -7,21 +7,32 @@ export default class SizeFilter extends Component {
     super(props);
  
     this.state = {
+      size: [
+        {id: 'all', name: 'all'},
+        {id: '35', name: '35'},
+        {id: '36', name: '36'},
+        {id: '37', name: '37'},
+        {id: '38', name: '38'},
+        {id: '39', name: '39'},
+        {id: '40', name: '40'},
+        {id: '41', name: '41'},
+        {id: '42', name: '42'},
+        {id: '43', name: '43'},
+        {id: '44', name: '44'},
+        {id: '45', name: '45'},
+      ]
     };
   }
  
   render() {
-    const size = new Array(12)
-    .fill('')
-    .map( (_, i) => ( {id:i, 
-        value:["all", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45"]} ) )
     return (
         <div className="sizeFilter">
 
             <Select 
-            brandName={size}
+            brandName={this.state.size}
             title1={'Size'}
             colorIcon={'black'}
+            bg={'#e9cbff'}
             />
 
         </div>

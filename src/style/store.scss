@@ -3,7 +3,9 @@
 .store{
     display: flex;
     flex-direction: column;
-
+    .showFilter{
+        display: none;
+    }
     .storeHeader{
         border-bottom: 1px solid #8080804d;
     }
@@ -95,11 +97,11 @@
                 width: 90%;
                 border-radius: 5px;
                 transition: .4s;
-                background: #e9cbff;
+                background:transparent;
             }
             .mainInput:hover{
               color: black;  
-              background: #d298ff;       
+              background: #e9cbff;       
             }
             .mainInput:hover ~ .iconInput{ 
               color: black!important;

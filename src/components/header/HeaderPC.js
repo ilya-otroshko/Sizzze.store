@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 
+import {NavLink} from 'react-router-dom'
 import Navbar from './Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -25,7 +26,11 @@ export default class HeaderPC extends Component {
             icon={faInstagram}
             />
             </div>      
-          <h1>sizzze | store</h1>
+          
+            <NavLink 
+                to="/">
+                  <h1>sizzze | store</h1>
+                </NavLink>
         </div>
         <Navbar />
         </div>

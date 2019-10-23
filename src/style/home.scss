@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
   z-index: 5;
+  filter: drop-shadow(2px 3px 4px black);
       img{
         height: 100%;
         width: 100%;
@@ -52,15 +53,33 @@
                       cursor: pointer;
                       padding: 10px;
                       outline: none;
+                      background: rgba(72, 72, 72, 0.6);
+                      color: white;
                   }
+                  .brandsName{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 1px;
+                    input{
+                        border: none;
+                    }
+                    input:hover
+                    {
+                        background:rgb(241, 241, 241);
+                        color: black;
+                    }
+                }
                   .mainInput{
                     border: 1px solid #ffffff8c;
                       width: 90%;
                       border-radius: 5px;
                       background:rgba(255, 255,255, .6);
                       transition: .4s;
+                      color: black;
                   }
                   .mainInput:hover{
+                    background: rgba(72, 72, 72, 0.6);
                     color: white;         
                   }
                   .mainInput:hover ~ .iconInput{ 
@@ -83,24 +102,19 @@
                   background: #e9cbff;
               }
           }
-      }
+      }   
+    }
 
-          .brandsName{
-              position: relative;
-              display: flex;
-              flex-direction: column;
-              background: white;
-              input{
-                  border: none;
-              }
-              input:hover
-              {
-                  background:rgb(241, 241, 241);
-                  color: rgb(193, 193, 193);
-              }
-          }
+      .scrollbarsClass{
+        border: 2px solid #ffffff8c;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        margin-top: -3px;
+        height: 170%!important;
+        position: absolute!important;
+        width: 90%!important;
+        padding-top: 20px;
       }
-
 
       .showBrandsName-enter-active {
           animation: fade 200ms;
@@ -130,7 +144,7 @@
   }
 }
 .slickSlider{
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
   cursor: grab;
   .slick-list{
@@ -157,7 +171,6 @@
         transform: translateY(-10px);
       }
       p{
-        opacity:0;
         transform: translateY(-20px);
       }
     }
@@ -168,36 +181,20 @@
 .nextArrow,
 .prevArrow{
   display: block;
-  width: 10px;
-  height: 10px;
+  width: fit-content;
   position: absolute;
-  top: -15%;
-  right: 20px;
+  top: 36.5%;
+  right: -5%;
+  z-index: 150;
 
   svg{
-    font-size: 40px;
+    font-size: 50px;
     cursor: pointer;
   }
 }
-.nextArrow{
-  svg{
-    margin-left: 10px;
-  }
-}
-
 .prevArrow{
-  svg{
-    margin-left: -20px;
-  }
-  left: 20px;
-}
-.hoverNextIcon{
-  transform: rotate(70deg);
-    position: absolute;
-    top: -7px;
-    right: -17px;
-    color: #00000003;
-}
+  left: -5%;
+} 
 
 .infoSlider{
   padding: 20px;
@@ -211,8 +208,7 @@
   p{
     font-weight: bold;
     color: #d298ff;
-    transition: transform .4s,
-                opacity .6s;
+    transition: transform .4s;
   }
   span{
     font-size: 13px;  
@@ -227,11 +223,7 @@
   animation: fade 100ms alternate-reverse;
 }
 
-@keyframes fade
-{
-from{ opacity: 0;}
-to { opacity: 1;}
-}
+
 
 .slick-track 
 {
@@ -315,6 +307,7 @@ to { opacity: 1;}
   height: 500px;
   position: relative;
   padding: 30px 0px;
+  filter: drop-shadow(2px 3px 4px black);
   img{
     width: 100%;
     height: 100%;
@@ -378,5 +371,9 @@ to { opacity: 1;}
   from {transform:translateX(500px);}
   to {transform: translateX(0px);}
 }
-
+@keyframes fade
+{
+from{ opacity: 0;}
+to { opacity: 1;}
+}
 /////////////////////////////////  . NEW ARRIVALS . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
