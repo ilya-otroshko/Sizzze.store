@@ -1,7 +1,7 @@
 import React from 'react'
 import Select from './Select'
 
-import fon from '../../images/fon1.jpg'
+import fon from '../../images/chBrand.webp'
 
 
 export default function ChooseBrand(){

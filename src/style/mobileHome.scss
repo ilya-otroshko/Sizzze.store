@@ -90,7 +90,9 @@
 
 
 @media screen and (max-width: 768px){
-
+  .footer{
+    display: none!important;
+  }
   .pageNav{
     .brandsNav {
       width: 100%;
@@ -127,12 +129,14 @@
 
 
   .newArrivals{
-    padding: 15px 0px;
+    padding: 20px 0px 0px 0px;
     .leftArrivals,
     .rightArrivals{
       width: 100%;
       height: 50%;
-      margin-bottom:15px
+    }
+    .leftArrivals{
+      margin-bottom: 20px;
     }
   }
       .secondLi{

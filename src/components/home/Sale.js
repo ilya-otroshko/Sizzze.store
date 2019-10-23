@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-import sale from '../../images/sale.jpeg'
+import sale from '../../images/sale.webp'
 
 
 export default function Sale(){
