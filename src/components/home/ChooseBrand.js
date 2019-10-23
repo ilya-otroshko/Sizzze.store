@@ -1,8 +1,7 @@
 import React from 'react'
 import Select from './Select'
 
-import fon from '../../images/chBrand.webp'
-
+import Image from 'react-image-webp';
 
 export default function ChooseBrand(){
   console.log(document.getElementsByClassName('leftArrivals').length)
@@ -29,7 +28,10 @@ export default function ChooseBrand(){
   
   return (
     <div className='wrapperChooseBrand'>
-      <img src={fon} alt="fon"/>
+      <Image
+          src={require('../../images/chBrand.jpeg')}
+          webp={require('../../images/chBrand.webp')}
+      />
       <section className="chooseBrand">
             <Select
             brandName={brandName}

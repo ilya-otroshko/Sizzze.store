@@ -1,14 +1,17 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-import sale from '../../images/sale.webp'
 
+import Image from 'react-image-webp';
 
 export default function Sale(){
   return (
 
       <section className="saleSelect">
-          <img src={sale} alt="sale"/>
+          <Image
+            src={require('../../images/sale.jpeg')}
+            webp={require('../../images/sale.webp')}
+          />
           <div>
           <NavLink 
                 to="sale" 

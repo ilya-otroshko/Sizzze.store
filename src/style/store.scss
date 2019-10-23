@@ -55,6 +55,9 @@
             width: 100%;
             form{
                 width: 100%;
+                button{
+                    display: none;
+                }
             }
             .modelSelect{
                 display: none;
@@ -102,9 +105,7 @@
               color: black!important;
             }
         }
-        button{
-            display: none;
-        }
+
 
     .brandsName{
         position: relative;

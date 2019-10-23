@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
-import img from '../../images/footer.webp'
+import Image from 'react-image-webp';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faTruck } from '@fortawesome/free-solid-svg-icons'
@@ -13,7 +14,10 @@ class Footer extends Component {
 
   return (
         <div className="footer">
-          <img src={img} alt="footer"/>
+          <Image
+            src={require('../../images/footer.jpeg')}
+            webp={require('../../images/footer.webp')}
+          />
             <div>
               <FontAwesomeIcon
               icon={faTruck} />

@@ -18,6 +18,9 @@ export default class Sidebar extends Component {
 
     return (
       <div className="sidebar">
+        <button>
+          Show filter
+        </button>
         <PriceRange />
         <SizeFilter />
         <BrandFilter />
