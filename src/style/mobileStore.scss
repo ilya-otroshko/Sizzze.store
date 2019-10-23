@@ -1,0 +1,32 @@
+@media screen and (max-width: 768px){   
+   .store
+   {
+       padding-top: 20px;
+       width: 85%;
+       .barAndProducts{
+        display: block;
+            .productsList{
+                width: 100%;
+                ul{
+                    a{
+                        width: 40%;
+                        .productsCard{
+                            padding: 0;
+                        }
+                    }
+                }
+                .infoSlider{
+                    padding: 5px 0px 5px 15px;
+                }
+            }
+            .sidebar{
+                width: 100%;
+                .priceRange{
+                    .input-range{
+                        width: 90%;
+                    }
+                }
+            }
+    }
+   } 
+}

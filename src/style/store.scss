@@ -9,7 +9,6 @@
     }
     .sidebar{
         width: 25%;
-        height: 1000px;
         /////////////////////  . PRICE RANGE . \\\\\\\\\\\\\\\\\\
         .priceRange{
             display: flex;
@@ -286,6 +285,7 @@
                 padding: 0;
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
                 a{
                     color: black;
                     text-decoration: none;
@@ -297,12 +297,16 @@
                         padding: 10px;
                         .cardBlock{
                             transition: box-shadow 1s;
+                            border-radius: 10px;
+                            box-shadow: 0 0 1px #7d7d7d96;
+
                         }
                         .cardBlock:hover{
                             box-shadow: 0 0 13px black;
                         }
                         img{
                             width: 100%;
+                            border-radius: 10px;
                         }
                     }
                 }

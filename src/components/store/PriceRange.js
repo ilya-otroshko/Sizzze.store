@@ -7,8 +7,8 @@ export default class PriceRange extends Component {
     super(props);
  
     this.state = {
-      value: { min: 230, max: 1000 },
-    };
+      value: { min: 230, max: 1000 }
+    }
   }
  
   render() {
@@ -20,9 +20,9 @@ export default class PriceRange extends Component {
           <InputRange
             step={10}
             maxValue={1000}
-            minValue={230}
-            value={this.state.value}
-            onChange={value => this.setState({ value })} />
+            minValue={230}  
+            onChange={value => this.setState({ value: value })}
+            value={this.state.value} />
           <p>Price: {this.state.value.min}uah -- {this.state.value.max}uah</p>
         </div>
       

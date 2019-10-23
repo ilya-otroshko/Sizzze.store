@@ -85,8 +85,10 @@ export default class HeaderMob extends Component {
       right
       onStateChange={(state) => this.handleStateChange(state)}
       isOpen={this.state.menuOpen}>
-              <OutsideClickHandler
-        onOutsideClick={() => {
+
+
+        <OutsideClickHandler
+         onOutsideClick={() => {
           this.closeMenu()
         }}
         >

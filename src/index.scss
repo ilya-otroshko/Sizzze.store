@@ -3,32 +3,25 @@
 @import'./style/home.scss';
 @import'./style/footer.scss';
 @import'./style/store.scss';
-@import'./style/mobile.scss';
+@import'./style/mobileHome.scss';
+@import'./style/mobileStore.scss';
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
-// @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Vidaloka&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Prosto+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
 
 body {
   display: flex;
   flex-direction: column;
-  // font-family: 'Open Sans', sans-serif;
-  // font-family: 'Merriweather Sans', sans-serif;
-  // font-family: 'Concert One', cursive;
-  // font-family: 'Vidaloka', serif;
-  // font-family: 'Poiret One', cursive;
-  font-family: 'Baloo', cursive;
+  font-family: 'Prosto One', cursive;
 
-  // font-family: 'Raleway', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    h1{
+      font-family: 'Baloo', cursive;
+    }
 }
 
 
