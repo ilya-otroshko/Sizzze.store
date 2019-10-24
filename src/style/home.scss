@@ -134,7 +134,7 @@
 
 .newItems
 {
-  background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,242,233,1) 50%);
+  background: linear-gradient(0deg, white 50%, #baadc3 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -154,11 +154,12 @@
   .blockInSlider{
     width: 90%;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: box-shadow .2s;
     img{
       width: 100%;
+      border-radius: 10px;
     }
   }
   .blockInSlider:hover{
@@ -167,6 +168,7 @@
     box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
 
     .infoSlider{
+      border-top: 1px solid black;
       h3{
         transform: translateY(-10px);
       }
@@ -200,6 +202,8 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border-top: 1px solid #a0a0a01a;
+  transition: border-top .4s;
   h3{
     font-weight: bold;
     font-size: 20px;

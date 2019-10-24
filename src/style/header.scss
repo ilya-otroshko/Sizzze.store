@@ -28,6 +28,11 @@ h1{
     z-index: 1000;
     top: -1px;
     box-shadow: 0px 1px 5px #0000004f;
+    .pageNav{
+      .secondLi{
+        margin: 0px 5px;
+      }
+     }
   }
   .liScroll{
     margin: 0!important;
@@ -78,7 +83,7 @@ h1{
     margin-bottom: 0;
     padding: 0;
     .secondLi{
-      margin: 0px 20px;
+      margin: 0px 30px;
       transition: margin 1s;
     }
       li{
@@ -143,7 +148,7 @@ h1{
           width: 80%;
           margin-top: 20px;
           list-style: none;
-          background:  rgba(255, 255,255, .8);
+          background: white;
           box-shadow: 0px 0px 7px 1px #00000026;
           display: flex;
           flex-direction: column;

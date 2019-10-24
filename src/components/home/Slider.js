@@ -32,19 +32,40 @@ function SampleNextArrow(props) {
     );
   }
 
+    document.addEventListener('keydown', function(event){
+
+      if (event.keyCode === 37 && document.getElementsByClassName('prevArrow').length > 0) 
+        document.getElementsByClassName('prevArrow')[0].click();
+    
+        if (event.keyCode === 39 && document.getElementsByClassName('nextArrow').length > 0) 
+        document.getElementsByClassName('nextArrow')[0].click();
+      
+    })
+  
 
 export default class SimpleSlider extends Component {
 
 
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      counts: [
+      {id: 1},
+      {id: 2},
+      {id: 3},
+      {id: 4},
+      {id: 5},
+      {id: 6}
+    ],
+    blocks: [
+      {id: 1}
+    ]
+  };
+}
  
   render() {
-    const counts = new Array(6)
-    .fill('')
-    .map( (_, i) => ( {id:i + 1} ) )
     
-    const blocks = new Array(1)
-    .fill('')
-    .map( (_, i) => ( {id:i + 1} ) )
     const stok = [40, 41, 42, 43, 44]
    
     const settings = {
@@ -57,7 +78,7 @@ export default class SimpleSlider extends Component {
       prevArrow: <SamplePrevArrow />,
       initialSlide: 0,
       lazyLoad: true,
-      swipeToSlide: true,
+      swipe:false,
       responsive: [
         {
           breakpoint: 1024,
@@ -72,14 +93,16 @@ export default class SimpleSlider extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            initialSlide: 2
+            initialSlide: 2,
+            swipe:true
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            swipe:true
           }
         }
       ]
@@ -88,10 +111,10 @@ export default class SimpleSlider extends Component {
       <div className="slickSlider">
         <Slider {...settings}>
   
-          {counts.map(count =>(
+          {this.state.counts.map(count =>(
           <SlideBlock 
           
-          blocks={blocks}
+          blocks={this.state.blocks}
           name="Ugg Neumel Black"
           price="1650"
           stok={stok}

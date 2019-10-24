@@ -7,9 +7,11 @@ import ProductRecomm from '../components/product/ProductRecomm'
 export default function Product(){
 
   return (
-      <div className="container ">     
-          <ProductSlider />
-          <ProductInfo />
+      <div className="container productWrapper">   
+        <div className="product">
+            <ProductSlider />
+            <ProductInfo />
+        </div>  
           <ProductDetails />
           <ProductRecomm />
       </div>

@@ -1,0 +1,113 @@
+@media screen and (max-width: 1200px){
+    .sizeTable{
+        tr{
+            td{
+                padding: 10px 9px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .productWrapper{
+        width: 90%;
+    
+    .product{
+            flex-direction: column;
+            .productSlider{
+                width: 100%;
+                img{
+                    object-fit: cover;
+                }
+            }
+        }
+        .productInfo{
+            width: 100%;
+        }
+        .productRecomm{
+            .productsList{
+                ul{
+                    a{
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .productBigSlider,
+    .productSmallSlider{
+        height: 400px;
+        .slick-list{
+            .slick-track{
+                .slick-slide{
+                    div{
+                        .blockInSlider{
+                            img:hover{
+                                transform: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productSmallSlider{
+        height: 150px;
+    }
+}
+
+
+@media screen and (max-width: 590px){
+    .sizeTable{
+        tr{
+            th{
+                display: none;
+            }
+            td{
+                padding: 10px 0px;
+            }
+        }
+    }
+    .productWrapper{
+        .product{
+            flex-direction: column;
+            .productBigSlider,
+            .productSmallSlider{
+                width: 100%;
+                .slick-list{
+                    width: 100%;
+                    .slick-track{
+                        .slick-slide{
+                            div{
+                                .blockInSlider{
+                                    width: 90%;
+                                    img{
+                                        object-fit: fill;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
+
+
+@media screen and (max-width: 425px){
+    .productWrapper{
+        .productRecomm{
+            .productsList{
+                ul{
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

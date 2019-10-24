@@ -9,7 +9,6 @@ export default class SizeFilter extends Component {
     this.state = {
       size: [
         {id: 'all', name: 'all'},
-        {id: '35', name: '35'},
         {id: '36', name: '36'},
         {id: '37', name: '37'},
         {id: '38', name: '38'},

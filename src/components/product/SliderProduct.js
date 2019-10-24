@@ -1,16 +1,12 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
 
-export default function SlideBlock(props){
+export default function SliderProduct(props){
     
     return (
 
         props.blocks.map(block =>(
-            <NavLink
-            to={`/products/${props.count}`}
-            key={props.count}
-            >
-            <div>
+
+            <div key={props.count}>
                 <div className="blockInSlider">
                     <img src={require(`../../images/${props.count}.jpeg`)} alt="" />
                     
@@ -21,13 +17,9 @@ export default function SlideBlock(props){
                     <span>In stok: {props.stok.join(', ')}</span>
                 </div>
             )}
-                
-
                 </div>
             </div>
-            </NavLink>
         ))
     )
   } 
-      
       
