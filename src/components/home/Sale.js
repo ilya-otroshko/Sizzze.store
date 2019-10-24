@@ -14,7 +14,7 @@ export default function Sale(){
           />
           <div>
           <NavLink 
-                to="sale" 
+                to="/store" 
                 className="saleLink">
              <h4>
                   SALE!

@@ -12,11 +12,11 @@ export default function NewArrivals(){
          <div className="leftArrivals">
              <div>
              <NavLink 
-                to="new-arrivals">
+                to="/store">
                  <p>We have new models!</p>
                  </NavLink>
                  <NavLink 
-                to="new-arrivals">
+                to="/store">
                  <button>Show me</button>   
                 </NavLink>
              </div>
@@ -26,11 +26,11 @@ export default function NewArrivals(){
          <div className="rightArrivals">
          <div>
                  <NavLink 
-                to="new-arrivals">
+                to="/store">
                  <p>Replenish Availability!</p>
                  </NavLink>
                  <NavLink 
-                to="new-arrivals">
+                to="/store">
                     <button>Show me</button> 
                 </NavLink>
              </div>
