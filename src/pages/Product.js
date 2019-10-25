@@ -1,7 +1,6 @@
 import React from 'react'
 import ProductSlider from '../components/product/ProductSlider'
 import ProductInfo from '../components/product/ProductInfo'
-import ProductDetails from '../components/product/ProductDetails'
 import ProductRecomm from '../components/product/ProductRecomm'
 
 export default function Product(){
@@ -12,7 +11,6 @@ export default function Product(){
             <ProductSlider />
             <ProductInfo />
         </div>  
-          <ProductDetails />
           <ProductRecomm />
       </div>
   )

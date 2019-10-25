@@ -20,7 +20,7 @@ export default class App extends Component{
         <Switch>
           <Route path={'/'} exact component={Home}/>
           <Route path={'/store'} component={Store}/>
-          <Route path={'/products/:id'} component={Product}/>   
+          <Route path={'/products/:id'} component={Product}/>
         </Switch>
       </div>
       <Footer />

@@ -5,6 +5,8 @@ import {CSSTransition,TransitionGroup,} from 'react-transition-group';
 import Brands  from '../../content/Brands'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import Basket from '../basket/Basket';
+
 
 
 class Navbar extends Component {
@@ -26,12 +28,12 @@ render(){
     
     window.addEventListener('scroll', function(){
         console.log()
-        if(this.window.pageYOffset > 90){
+        if(this.window.pageYOffset > 80){
            this.document.getElementsByClassName('nav')[0].classList.add('navScroll');
            document.getElementsByTagName('li')[1].classList.add('liScroll');
            document.getElementsByClassName('scrollTitle')[0].classList.add('scrollTitleShow');
         }
-        if(this.window.pageYOffset < 90){
+        if(this.window.pageYOffset < 80){
             document.getElementsByClassName('nav')[0].classList.remove('navScroll');
             document.getElementsByTagName('li')[1].classList.remove('liScroll');
             document.getElementsByClassName('scrollTitle')[0].classList.remove('scrollTitleShow');
@@ -85,6 +87,7 @@ render(){
                     </TransitionGroup>
             </li>
         </ul>
+        <Basket />
     </nav>
         )
     }

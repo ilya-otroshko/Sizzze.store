@@ -61,6 +61,35 @@
 
 
 @media screen and (max-width: 590px){
+
+    .detailsTable{
+        tr{
+            th{
+                border: 1px solid #48484882;
+                padding: 10px 0px;
+            }
+            th:nth-child(3){
+                display: none;
+            }
+            th:nth-child(4){
+                display: table-cell;
+            }
+            td{
+                border: 1px solid #48484882;
+                padding: 20px 0px;
+                a{
+                    border: none;
+                    border-bottom: none;
+                    padding: 10px 5px;
+                    svg{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+
     .sizeTable{
         tr{
             th{
@@ -99,6 +128,12 @@
 
 
 @media screen and (max-width: 425px){
+
+    .detailsTable{
+        svg{
+            display: none;
+        }
+    }
     .productWrapper{
         .productRecomm{
             .productsList{

@@ -1,11 +1,17 @@
 import React,{Component} from 'react'
 
+import {NavLink} from 'react-router-dom'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 export default class ProductInfo extends Component {
   constructor(props) {
     super(props);
  
     this.state = {
+        color: 'черный',
+        gender: 'мужские',
         title: 'Ugg Neumel Black',
         price: 1650,
         sizes: [
@@ -21,7 +27,7 @@ export default class ProductInfo extends Component {
           {id: 45, count: 0, stock: ''},
 
         ],
-        country: 'Китай',
+        country: 'китай',
         description: 'Сегодня UGG – это самый популярный производитель угг. Каждый сезон бренд выпускает разнообразные новые модели – от очень коротких до высоких, от водоотталкивающих и практичных до декорированных и эпатажных. Сапоги UGG сделаны из высококачественной овчины. Легкая, прочная, формованная подошва предотвращает скольжение. Стелька из овчины, латекса и пены, выдерживает любой холод и защищает от попадания влаги. Поверхность сапог не деформируется и не теряет свой первоначальный вид, она не пропускает влагу и способствует сохранению комфорта и уюта. Все модели бренда UGG не требуют особого ухода, что обеспечивает удивительную длительность их использования.'
     };
   }
@@ -32,20 +38,21 @@ export default class ProductInfo extends Component {
         <div className="productInfo">
            <h3>{this.state.title}</h3> 
            <p className="productPrice">
-           {this.state.price}uah</p>
+           {this.state.price}грн</p>
 
 
            <p className="productCountry">
-             Country: {this.state.country}</p>
+             Производитель: {this.state.country}</p>
 
            <p className="productDescription">
-             Description: {this.state.description}</p>
+             Описание: </p>
+             <p>{this.state.description}</p>
 
              <table className="sizeTable">
                <thead>
 
                <tr>
-                 <th>Size</th>
+                 <th>Размер</th>
                  {this.state.sizes.map(size => (
                     <td key={size.id}
                     className={size.stock}>
@@ -56,7 +63,7 @@ export default class ProductInfo extends Component {
 
                <tbody>
                <tr>
-                 <th>Count</th>
+                 <th>Количество</th>
                {this.state.sizes.map(size => (
                     <td key={size.id}
                     className={size.stock}>
@@ -66,6 +73,43 @@ export default class ProductInfo extends Component {
                </tbody>
                
              </table>
+
+             <table className="detailsTable">
+            <thead>
+              <tr>
+                <th>Цвет</th>
+                <th>Пол</th>
+                <th>Производитель</th>
+                <th>Страна</th>
+                
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>
+                    <NavLink to={`/color/${this.state.color}`}>
+                      {this.state.color} 
+                      <FontAwesomeIcon 
+                        icon={faCaretDown} />
+                    </NavLink>
+                  </td>
+                  <td>
+                    <NavLink to={`/gender/${this.state.gender}`}>
+                      {this.state.gender}
+                      <FontAwesomeIcon 
+                        icon={faCaretDown} />
+                    </NavLink>
+                  </td>
+                  <td>
+                    <NavLink to={`/country/${this.state.country}`}>
+                      {this.state.country}
+                      <FontAwesomeIcon 
+                        icon={faCaretDown} />
+                    </NavLink>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
     );
   }

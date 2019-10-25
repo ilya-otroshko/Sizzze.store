@@ -1,0 +1,122 @@
+.basketInHeader{
+    position: absolute;
+    right: 15%;
+    button{
+        background: transparent;
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            font-size: 30px;
+            border-radius:5px;
+            border: 1px solid black;
+            padding: 0px 10px;
+            color: #d298ff;
+            margin-right: 5px;
+        }
+        svg{
+            font-size: 40px;
+        }
+    }
+}
+
+.styles_modal__gNwvD{
+    padding: 0;
+    border-radius: 5px;
+    max-width: none;
+    width: 70%;
+
+    h3{
+        border-bottom: 1px solid gray;
+        padding: 25px;
+    }
+    .styles_closeButton__20ID4{
+        outline: none;
+        top: 5px;
+        right: 10px;
+    }
+    .fullBasket{
+        padding: 20px 0px;
+        .itemsInBasket{
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0px;
+            border-bottom: 1px solid gray;
+            border-top: 1px solid gray;
+            display: flex;
+            justify-content: space-between;
+            .imageInBasket{
+                width: 20%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .orderBasket{
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+            div{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            div:first-child{
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+        }
+        .continueShopping,
+        .checkout{
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            background: none;
+            border: 1px solid #d298ff;
+            margin: 10px;
+            color: #d298ff;
+            transition: background .4s,
+                        color .4s;
+        }
+        .continueShopping:hover{
+            background: #d298ff;
+            color: white;
+        }
+        .checkout{
+            color: white;
+            background: #d298ff;
+        }
+    }
+        
+    .emptyBasket{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            margin-top: -7.3%;
+            button{
+                background: none;
+                outline: none;
+                border: 1px solid #d298ff;
+                background: #d298ff;
+                border-radius: 5px;
+                padding: 5px 10px;
+                transition: color .4s,
+                            background .4s, 
+                            border .4s,
+                            transform .4s;
+                            
+            }
+            button:hover{
+                transform: scale(1.1);
+                color: white;
+            }
+        }
+    }
+}
+

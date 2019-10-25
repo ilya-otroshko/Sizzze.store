@@ -55,6 +55,7 @@
 
 .sizeTable{
     width: 100%;
+    margin-top: 30px;
     tr{
         th{
             border: 1px solid #b9b9b982;
@@ -65,62 +66,51 @@
             text-align: center;
             padding: 10px 14px;
             color: grey;
+            display: none;
         }
         .inStock{
             background: linear-gradient(0deg, white -20%, #baadc3 91%);
             color: black;
+            display: table-cell;
+        }
+    }
+}
+
+.detailsTable{
+    width: 100%;
+    background: linear-gradient(0deg, white -20%, #baadc3 91%);
+    text-align: center;
+    margin-top: 30px;
+    tr{
+        th{
+            border: 1px solid #48484882;
+            padding: 10px 0px;
+        }
+        th:nth-child(4){
+            display: none;
+        }
+        td{
+            border: 1px solid #48484882;
+            padding: 20px 0px;
+            a{
+                color: black;
+                border: 2px solid transparent;
+                border-bottom: 2px solid black;
+                border-radius: 10px;
+                padding: 10px;
+                transition: border .8s;
+                svg{
+                    margin-left: 7px;
+                }
+            }
+            a:hover{
+                border: 2px solid black;
+            }
         }
     }
 }
 
 /////////////////////  . PRODUCT INFO. \\\\\\\\\\\\\\\\\\\\\\  
-
-
-/////////////////////  . PRODUCT DETAILS. \\\\\\\\\\\\\\\\\\\\\\  
-
-.productDetails{
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 50px;
-    p{
-        font-size: 20px;
-        text-align: center;
-        border-bottom: 2px solid #baadc3;
-        border-radius: 20px;
-    }
-    .detailsTable{
-        width: 100%;
-        background: linear-gradient(0deg, white -20%, #baadc3 91%);
-
-        tr{
-            th{
-                border: 1px solid #48484882;
-                padding: 10px;
-                width: 20%;
-               
-            }
-
-            td{
-                border: 1px solid #48484882;
-                padding: 20px;
-                a{
-                    color: black;
-                    border: 2px solid transparent;
-                    border-bottom: 2px solid black;
-                    border-radius: 10px;
-                    padding: 10px;
-                    transition: border .8s;
-                }
-                a:hover{
-                    border: 2px solid black;
-                }
-            }
-        }
-    }
-}
-
-
-/////////////////////  . PRODUCT DETAILS. \\\\\\\\\\\\\\\\\\\\\\  
 
 
 .productRecomm{
