@@ -1,0 +1,100 @@
+.order{
+    background: #baadc3;
+    padding: 50px 0px;
+    h3{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container-fluid{
+        width: 90%;
+        display: flex;    
+        padding: 0;
+        .orderForm{
+            background: white;
+            width: 80%;
+            
+                .newGreen,
+                .resident{
+                padding: 10px;
+                border-radius: 5px;
+                outline: none;
+                background: none;
+                border: 1px solid#47b774;
+                margin: 10px;
+                color: #47b774;
+                transition: background .4s,
+                            color .4s;
+            }
+        .newGreen:hover{
+            background: #47b774;
+            color: white;
+        }
+        .resident{
+            border: 1px solid #b692d0;
+            color: #b692d0;
+            background: white;
+        }
+        .resident:hover{
+            background: #b692d0;
+            color: white;
+        }
+        }
+        .basket{
+            background: white;
+            width: 40%;
+            border: 5px solid black;
+            margin: 0px 20px;
+            h3{
+                padding: 15px;
+                width: 90%;
+                margin: 0 auto;
+            }
+            .fullBasket{
+                padding-bottom: 20px;
+                .orderBasket{
+                    display: flex;
+                    div{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        font-size: 30px;
+                    }
+                }
+                .itemsInBasket{
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 20px 0px;
+                    border-bottom: 1px solid gray;
+                    border-top: 1px solid gray;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+                    .deleteItemBasket{
+                        display: none;
+                    }
+                    .imageInBasket{
+                        width: 20%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .infoInBasket{
+                        button{
+                            display: none;
+                        }
+                        input{
+                            cursor: default;
+                            border-radius: 5px;
+                            border: 2px solid #baadc3;
+                            text-align: center;
+                            width: 30%;
+                            margin: 0px 3px;
+                            outline: none;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

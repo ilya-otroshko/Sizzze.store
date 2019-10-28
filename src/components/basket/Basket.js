@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 import Modal from 'react-responsive-modal';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 import BasketItems from './BasketItems';
 
 export default class Basket extends Component{
@@ -28,25 +28,24 @@ export default class Basket extends Component{
   };
 
   store = () => {
-      document.location.pathname = '/store';
-  }
+        document.location.pathname = '/store';
+    }
+
   order = () => {
         document.location.pathname = '/order';
-}
-
+    }
+    
     delete = (item) => {
         this.setState({ basketCount: item })
     }
   render(){
-    console.log(this.state.name)
-
     const { open } = this.state;
     return (
         <div className="basketInHeader">
             <button onClick={this.onOpenModal}>
                     <span>{this.state.basketCount}</span>
                         <FontAwesomeIcon
-                        icon={faShoppingCart} 
+                        icon={faShoppingBasket} 
                         />
                 </button>
         <Modal 
@@ -70,6 +69,11 @@ export default class Basket extends Component{
                     :
                     (
                     <div className="fullBasket">
+                       <BasketItems
+                       title={this.state.title}
+                       size={this.state.size}
+                       price={this.state.price}
+                       delete={this.delete}/>
                        <BasketItems
                        title={this.state.title}
                        size={this.state.size}

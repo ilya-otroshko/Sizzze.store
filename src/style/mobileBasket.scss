@@ -1,0 +1,85 @@
+@media screen and (max-width: 1000px){
+    .styles_modal__gNwvD{
+        width: 100%;
+        .fullBasket{
+            .itemsInBasket{
+                .imageInBasket{
+                    width: 50%;
+                }
+                .infoInBasket{
+                    div{
+                        flex-direction: column;
+                        align-items: flex-start;
+                        div{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: unset;
+                            input{
+                                width: 30%;
+                            }
+                            .quantity:first-child{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .styles_modal__gNwvD{
+        .emptyBasket{
+            div{
+                margin-bottom: 5%;
+            }
+        }
+        .fullBasket{
+            .orderBasket{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div:first-child{
+                    flex-direction: row;
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+            .itemsInBasket{
+                flex-direction: column;
+                align-items: center;
+                .imageInBasket{
+                    width: 85%;
+                }
+                .priceBasket{
+                    display: flex;
+                    margin-top:20px;
+                }
+                .infoInBasket{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    div{
+                        flex-direction: column;
+                        align-items: center;
+                        div{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: unset;
+                            justify-content: center;
+                            input{
+                                width: 30%;
+                            }
+                            .quantity:first-child{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

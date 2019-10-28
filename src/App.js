@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import HeaderMob from './components/header/HeaderMob';
 import HeaderPC from './components/header/HeaderPC';
 import Product from './pages/Product';
+import Order from './components/orders/Order';
 
 export default class App extends Component{
 
@@ -21,6 +22,7 @@ export default class App extends Component{
           <Route path={'/'} exact component={Home}/>
           <Route path={'/store'} component={Store}/>
           <Route path={'/products/:id'} component={Product}/>
+          <Route path={'/order'} component={Order}/>
         </Switch>
       </div>
       <Footer />

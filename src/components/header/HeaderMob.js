@@ -9,6 +9,7 @@ import Brands  from '../../content/Brands'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import Basket from '../basket/Basket';
 
 export default class HeaderMob extends Component {
   constructor (props) {
@@ -81,7 +82,9 @@ export default class HeaderMob extends Component {
                 to="/">
                   <h1>sizzze | store</h1>
                 </NavLink>
+        
         </div>
+        <Basket />
       <Menu
       pageWrapId = { "page-wrap" }
       outerContainerId={ "outer-container" }

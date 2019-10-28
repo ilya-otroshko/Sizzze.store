@@ -8,7 +8,8 @@ export default class BasketItems extends Component{
     super(props);
  
     this.state = {
-        basketCount: 0
+        basketCount: 0,
+        num: 1
     };
   }
   onOpenModal = () => {
@@ -18,7 +19,20 @@ export default class BasketItems extends Component{
   onCloseModal = () => {
     this.setState({ open: false });
   };
+
+  minus = e => {
+    let num = e.target.nextSibling.value;
+    if(num > 1)
+    this.setState({num: num - 1})
+  };
+
+  plus = e => {
+    let num = e.target.previousSibling.value;
+    if(num < 5)
+    this.setState({num: (+num) + 1})
+  };
   render(){
+
     return (
         <div className="itemsInBasket">
             <div className="imageInBasket">
@@ -28,14 +42,26 @@ export default class BasketItems extends Component{
             <div className="infoInBasket">
                     <h5>{this.props.title}</h5>
                     <p>Размер: {this.props.size}</p>
-                    <p>Количество: 
+                    <div>Количество:
+                      <div>
+                      <button 
+                      className="quantity"
+                      onClick={this.minus}>
+                        -
+                      </button>
                         <input 
                             type="number"
-                            min="1" 
-                            max="3" 
-                            step="1"/>
-                    </p>
-                    
+                            readOnly
+                            value={this.state.num}/>
+                      <button 
+                      className="quantity"
+                      onClick={this.plus}>
+                        +
+                      </button>
+                      </div>
+                      
+                      </div> 
+    
             </div>
             <div className="priceBasket">
                 Цена:

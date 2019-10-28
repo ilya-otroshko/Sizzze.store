@@ -15,6 +15,10 @@
     box-shadow: 0px 1px 5px #0000004f;
     z-index: 2345;
     justify-content: space-between;
+    .basketInHeader{
+      top: 15%;
+     
+    }
     h2{
       margin-left: 10px;
     }
@@ -195,7 +199,7 @@
       }
     }
     .insta{
-      margin-left: 25px;
+      margin-left: 10px;
       h1{
           font-size: 35px;
           margin-top: 7px;
@@ -205,5 +209,19 @@
         width: 18.5px;
         height: 18.5px;
       }
+  }
+  .headerMob{
+    .basketInHeader{
+      top: 20%;
+      right: 18%;
+      button{
+        span{
+          display: none;
+        }
+        svg{
+          font-size: 30px;
+        }
+      }
+    }
   }
 }
