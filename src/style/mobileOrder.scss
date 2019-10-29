@@ -1,0 +1,76 @@
+@media screen and (max-width: 1000px){
+    .order{
+        .container-fluid{
+            .basket{
+                .fullBasket{
+                    .itemsInBasket{
+                        .imageInBasket{
+                            width: 50%;
+                        }
+                        .infoInBasket{
+                            div{
+                                flex-direction: column;
+                                align-items: flex-start;
+                                div{
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: unset;
+                                    input{
+                                        width: 30%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+        
+
+@media screen and (max-width: 768px){
+        .fullBasket{
+            .orderBasket{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div:first-child{
+                    flex-direction: row;
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+            .itemsInBasket{
+                flex-direction: column;
+                align-items: center;
+                .imageInBasket{
+                    width: 85%;
+                }
+                .priceBasket{
+                    display: flex;
+                    margin-top:20px;
+                }
+                .infoInBasket{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    div{
+                        flex-direction: column;
+                        align-items: center;
+                        div{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: unset;
+                            justify-content: center;
+                            input{
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
