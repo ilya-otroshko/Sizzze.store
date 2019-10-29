@@ -2,17 +2,23 @@
     background: #baadc3;
     padding: 50px 0px;
     h3{
-        width: 90%;
+        width: 75%;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
     .container-fluid{
-        width: 90%;
+        width: 75%;
         display: flex;    
         padding: 0;
         .orderForm{
             background: white;
-            width: 80%;
-            
+            width: 57%;
+            .residentOrGreen{
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                width: 90%;
+            }
                 .newGreen,
                 .resident{
                 padding: 10px;
@@ -20,8 +26,9 @@
                 outline: none;
                 background: none;
                 border: 1px solid#47b774;
+                background: #47b774;
                 margin: 10px;
-                color: #47b774;
+                color: white;
                 transition: background .4s,
                             color .4s;
             }
@@ -44,6 +51,10 @@
             width: 40%;
             border: 5px solid black;
             margin: 0px 20px;
+            max-height: 50%;
+            position: fixed;
+            right: 1.5%;
+            overflow: auto;
             h3{
                 padding: 15px;
                 width: 90%;
@@ -105,3 +116,129 @@
         }
     }
 }
+
+//////////////////////////// FORM \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+.selectOrder{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+        .brandSelect{
+            position: relative;
+            width: 90%;
+          }
+          .iconInput{
+            width: fit-content;
+            position: absolute;
+            right: 15%;
+            top: 30%;
+            transition: .4s;
+          }
+      
+        p{
+          color: black;
+          font-weight: 400;
+        }
+        input{
+              cursor: pointer;
+              padding: 10px;
+              outline: none;
+              color: #171717;
+          }
+          .wrapperBrandsName{
+          box-shadow: 0px 0px 7px 1px #00000026;
+          width: 90%!important;
+          border: 1px solid #9c9c9c;
+          border-top: none;
+          position: absolute;
+          z-index: 10;
+            .brandsName{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                background: grey;
+               
+                input{
+                    border: none;
+                }
+                input:hover
+                {
+                    background:#eee7f3;
+                }
+            }
+        }
+        .mainBlock{
+            position: relative;
+        }
+              .mainInput{
+                  border: 1px solid #9c9c9c;
+                  transition: .4s;
+                  color: #171717;
+                  width: 90%;
+              }
+              .mainInput:hover{
+                background: #baadc3;
+              }
+        .recipInformation{
+            width: 90%;
+            input{
+                width: 90%;
+            }
+        .nameOrder{
+                border: 1px solid #9c9c9c;
+                border-bottom: none;
+        }
+    }
+    .emailOrder,
+    .phoneOrder{
+        width: 90%;
+        input{
+            width: 90%;
+        }
+    }
+    .commentOrder{
+        width: 90%;
+        textarea{
+            width: 90%;
+            outline: none;
+        }
+    }
+    .footerOrder{
+        width: 90%;
+        div:first-child{
+            border-top: 2px solid #baadc3;
+            padding-top: 20px;
+        }
+        div{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                font-size: 25px;
+            }
+            p:last-child{
+                font-size: 40px;
+                font-weight: bold;
+            }
+            button{
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                outline: none;
+                background: none;
+                border: 1px solid#b692d0;
+                background: #b692d0;
+                color: white;
+                transition: background .4s,
+                            color .4s;
+            }
+            .button:hover{
+                background: #b692d0;
+                color: white;
+            }
+        }
+    }
+}
+

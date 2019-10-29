@@ -82,10 +82,6 @@ export default class Select extends Component {
            colorModel: 'white',
            bg2: this.props.bg })
     }; 
-
-
-  
-    
      render() {
         
         let scroll = {width: '100%'}

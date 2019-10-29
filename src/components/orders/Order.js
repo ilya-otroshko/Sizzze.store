@@ -38,61 +38,62 @@ export default class Order extends Component{
          orderForm: 'resident',
          residentBg: '#b692d0', 
          residentCol: 'white',
-         greenBg: ' ', 
-         greenCol: ' '
+         greenBg: 'white', 
+         greenCol: '#47b774'
          })
     }
   render(){
-      console.log(this.state.orderForm)
     return (
         <div className="order">
             <h3>Оформление заказа</h3>
 
             <div className="container-fluid">
-                <div className="orderForm">          
-                    <button 
-                        onClick={this.green}
-                        style={{
-                            background: this.state.greenBg, 
-                            color: this.state.greenCol }}
-                        className="newGreen">
-                            Новый зеленый
-                    </button>
+                <div className="orderForm">  
 
+                <div className="residentOrGreen">
                     <button 
-                        onClick={this.resident}
-                        className="resident"
-                        style={{
-                            background: this.state.residentBg, 
-                            color: this.state.residentCol }}>
-                            Резидент
-                    </button>
+                            onClick={this.green}
+                            style={{
+                                background: this.state.greenBg, 
+                                color: this.state.greenCol }}
+                            className="newGreen">
+                            я новый покупатель
+                        </button>
+
+                        <button 
+                            onClick={this.resident}
+                            className="resident"
+                            style={{
+                                background: this.state.residentBg, 
+                                color: this.state.residentCol }}>
+                                я постоянный клиент
+                        </button>
+                </div>      
+                    
 
                     {this.state.orderForm === 'green' &&(
-                        <OrderGreenForm />
+                        <OrderGreenForm 
+                        sum={1650}/>
                     )}
                      {this.state.orderForm === 'resident' &&(
                         <OrderResidentForm />
                     )}
                     </div>
-
-                <div className="basket">
-                    <h3>Ваш заказ</h3>
-                    <div className="fullBasket">
-                       <BasketItems
-                       title={this.state.title}
-                       size={this.state.size}
-                       price={this.state.price}/>
-                       <BasketItems
-                       title={this.state.title}
-                       size={this.state.size}
-                       price={this.state.price}/>
-                        <div className="orderBasket">
-                            <div>Сумма: <p>{this.state.price}грн</p></div>
+                    {this.state.orderForm === 'green' &&(
+                        <div className="basket">
+                            <h3>Ваш заказ</h3>
+                            <div className="fullBasket">
+                            <BasketItems
+                            title={this.state.title}
+                            size={this.state.size}
+                            price={this.state.price}/>
+                                <div className="orderBasket">
+                                    <div>Сумма: <p>{this.state.price}грн</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            
+                    )}
             </div>
 
         </div>

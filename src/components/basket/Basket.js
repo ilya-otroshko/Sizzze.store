@@ -74,11 +74,6 @@ export default class Basket extends Component{
                        size={this.state.size}
                        price={this.state.price}
                        delete={this.delete}/>
-                       <BasketItems
-                       title={this.state.title}
-                       size={this.state.size}
-                       price={this.state.price}
-                       delete={this.delete}/>
                         <div className="orderBasket">
                             <div>Сумма: <p>{this.state.price}грн</p></div>
                             

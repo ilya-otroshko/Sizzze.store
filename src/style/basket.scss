@@ -25,12 +25,15 @@
 }
 .styles_overlay__CLSq-{
     z-index: 4000;
+    overflow-y: hidden;
 }
 .styles_modal__gNwvD{
     padding: 0;
     border-radius: 5px;
     max-width: none;
     width: 70%;
+    overflow-y: auto;
+    height: 100%;
 
     h3{
         border-bottom: 1px solid gray;

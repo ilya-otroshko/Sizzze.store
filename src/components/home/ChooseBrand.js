@@ -30,8 +30,8 @@ export default class ChooseBrand extends Component{
 
 render() {
     window.addEventListener('scroll', function(){
-      document.getElementsByClassName('footer')[0].style.display="flex"
-      if(document.getElementsByClassName('leftArrivals').length > 0){
+      if(document.getElementsByClassName('footer').length > 0){
+          document.getElementsByClassName('footer')[0].style.display="flex"
         if(window.pageYOffset > 1002){
           document.getElementsByClassName('footer')[0].style.display="flex"
           document.getElementsByClassName('leftArrivals')[0].style.display="flex"
@@ -41,7 +41,9 @@ render() {
           document.getElementsByClassName('footer')[0].style.display="none"
         }
       }
-  })
+      }
+    
+  )
   
   return (
     <div className='wrapperChooseBrand'>

@@ -3,8 +3,6 @@ import StoreHeader from '../components/store/StoreHeader';
 import Sidebar from '../components/store/Sidebar';
 import Products from '../components/store/ProductsList';
 
-
-
 export default class Store extends Component{
   constructor(props) {
     super(props);
@@ -36,7 +34,6 @@ export default class Store extends Component{
             />
           </div>
         </div>
-  
     )
   }
   }

@@ -4,6 +4,7 @@ import ChooseBrand from '../components/home/ChooseBrand'
 import NewSlider from '../components/home/NewSlider'
 import Sale from '../components/home/Sale'
 import NewArrivals from '../components/home/NewArrivals'
+import Footer from '../components/footer/Footer'
 
 export default function Home(){
 
@@ -13,6 +14,7 @@ export default function Home(){
       <NewSlider />
       <Sale />
       <NewArrivals />
+      <Footer />
       </div>
   )
 }
