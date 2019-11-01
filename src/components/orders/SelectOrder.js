@@ -4,8 +4,9 @@ import {CSSTransition,TransitionGroup,} from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import OutsideClickHandler from 'react-outside-click-handler';
+import { connect } from 'react-redux';
 
-export default class SelectOrder extends Component {
+class SelectOrder extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -13,10 +14,13 @@ export default class SelectOrder extends Component {
             inputValue: this.props.inputValue};
       this.handleChangeInput = this.handleChangeInput.bind(this);
     }
+
     handleChangeInput(event) {
-      this.setState({inputValue: event.target.value})
+      this.setState({
+            inputValue: event.target.value,
+            })
+      this.props.changeForm(this.props.method, event.target.value);
       this.clickOutInput();
-      this.props.select(event.target.value)         
     }
     inputToggleList = () => {
         this.setState({
@@ -90,3 +94,13 @@ export default class SelectOrder extends Component {
       );
     }
   }
+
+  export default connect(
+    state => ({
+    }),
+    dispatch => ({
+        changeForm: (method, inputValue) => {
+            dispatch({ type: method[0].id, value: inputValue})
+        }
+    })
+  )(SelectOrder);

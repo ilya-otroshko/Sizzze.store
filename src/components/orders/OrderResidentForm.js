@@ -3,9 +3,7 @@ import React,{Component} from 'react';
 export default class OrderResidentForm extends Component{
   constructor(props) {
     super(props);
- 
     this.state = {
-
     };
   }
   handleSubmit(event) {

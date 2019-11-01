@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import SelectOrder from './SelectOrder';
 import OrderRecipient from './OrderRecipient';
+import { connect } from 'react-redux';
 
-export default class OrderGreenForm extends Component{
+ class OrderGreenForm extends Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +14,7 @@ export default class OrderGreenForm extends Component{
         {id: 'newPost', name: 'Новая почта'}
       ]
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   select = (count) => {
     this.setState({ 
@@ -20,11 +22,10 @@ export default class OrderGreenForm extends Component{
      })
   }
   handleSubmit(event) {
-
-    event.preventDefault();
+    event.preventDefault(); 
+    console.log(this.props.targetState)
   }
   render(){
-    console.log(this.state.payment);
     return (
         <form action="">
         <div>
@@ -64,3 +65,10 @@ export default class OrderGreenForm extends Component{
     }
 }
 
+
+export default connect(
+  state => ({
+    targetState: state
+  }),
+  dispatch => ({})
+)(OrderGreenForm);

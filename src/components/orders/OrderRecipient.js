@@ -1,10 +1,16 @@
 import React,{Component} from 'react';
+import { connect } from 'react-redux';
 
-export default class OrderRecipient extends Component{
+ class OrderRecipient extends Component{
   constructor(props) {
     super(props);
     this.state = {
     };
+    this.inputBlur = this.inputBlur.bind(this);
+  }
+
+  inputBlur(event) {
+    this.props.changeForm(event.target.name, event.target.value);
   }
 
   render(){
@@ -17,11 +23,16 @@ export default class OrderRecipient extends Component{
                 type="text"
                 placeholder="Имя"
                 className="nameOrder"
+                onBlur={this.inputBlur}
+                name="name"
                 />
                 <input 
                 type="text"
                 placeholder="Фамилия"
-                className="surnameOrder"/>
+                className="surnameOrder"
+                onBlur={this.inputBlur}
+                name="surname"
+                />
             </div>
         </div>
         <div className="selectOrder">
@@ -30,6 +41,8 @@ export default class OrderRecipient extends Component{
                     <input 
                     type="email"
                     placeholder="Email"
+                    onBlur={this.inputBlur}
+                    name="email"
                     />
                 </div>
             </div>
@@ -40,13 +53,19 @@ export default class OrderRecipient extends Component{
                     type="phone"
                     defaultValue
                     ="+380"
+                    onBlur={this.inputBlur}
+                    name="phone"
                    />
                 </div>
             </div>
             <div className="selectOrder">
                 <div className="commentOrder">
                     <p>Комментарий:</p>
-                    <textarea rows="5" />
+                    <textarea 
+                    rows="5" 
+                    onBlur={this.inputBlur}
+                    name="comment"
+                    />
                 </div>
             </div>
         </div>
@@ -55,3 +74,11 @@ export default class OrderRecipient extends Component{
     }
 }
 
+export default connect(
+    state => ({}),
+    dispatch => ({
+        changeForm: (type, value) => {
+            dispatch({ type: type, value: value})
+        }
+    })
+  )(OrderRecipient);
