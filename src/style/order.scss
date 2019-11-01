@@ -158,13 +158,13 @@
                 display: flex;
                 flex-direction: column;
                 background: grey;
-               
                 input{
                     border: none;
                 }
                 input:hover
                 {
                     background:#eee7f3;
+                    color: black;
                 }
             }
         }
@@ -191,7 +191,8 @@
         }
     }
     .emailOrder,
-    .phoneOrder{
+    .phoneOrder,
+    .passwordOrder{
         width: 90%;
         input{
             width: 90%;
@@ -222,23 +223,35 @@
                 font-size: 40px;
                 font-weight: bold;
             }
-            button{
-                width: 100%;
-                padding: 10px;
-                border-radius: 5px;
-                outline: none;
-                background: none;
-                border: 1px solid#b692d0;
-                background: #b692d0;
-                color: white;
-                transition: background .4s,
-                            color .4s;
-            }
-            .button:hover{
-                background: #b692d0;
-                color: white;
-            }
         }
     }
 }
+.submitOrder,
+.submitOrder:focus{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid#b692d0;
+    background: #b692d0;
+    color: white;
+    transition: background .4s,
+                color .4s;
+}
 
+.submitOrder:hover{
+    background: #b692d0;
+    color: white;
+}
+.loginButton{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{
+        width: 90%;
+        &:focus{
+            width: 90%;  
+        }
+    }
+}

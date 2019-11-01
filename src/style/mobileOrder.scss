@@ -11,6 +11,11 @@
     }
 }
 @media screen and (max-width: 500px){
+    .loginButton{
+        button{
+            width: 100%;
+        }
+    }
     .order{
         h3{
             width: 95%;

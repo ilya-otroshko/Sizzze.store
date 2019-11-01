@@ -8,12 +8,43 @@ export default class OrderResidentForm extends Component{
 
     };
   }
+  handleSubmit(event) {
 
+    event.preventDefault();
+  }
   render(){
     return (
-        <form action="">
+        <form 
+        action=""
+        className="residentForm">
         <div>
-            резидент
+          <div className="selectOrder">
+              <div className="emailOrder">
+                  <p>Email:</p>
+                  <input 
+                  type="email"
+                  placeholder="Email"
+                  />
+              </div>
+            </div>
+            <div className="selectOrder">
+              <div className="passwordOrder">
+                  <p>Пароль:</p>
+                  <input 
+                  type="password"
+                  placeholder="Пароль"
+                  />
+              </div>
+            </div>
+            <div className="selectOrder">
+              <div className="loginButton">
+                  <button 
+                  className="submitOrder"
+                  onClick={this.handleSubmit}>
+                    Войти
+                  </button>
+                </div>
+              </div>
         </div>
     </form>
         )

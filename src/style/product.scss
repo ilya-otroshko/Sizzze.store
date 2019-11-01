@@ -51,30 +51,105 @@
 
 
 /////////////////////  . PRODUCT INFO. \\\\\\\\\\\\\\\\\\\\\\  
-
-
-.sizeTable{
-    width: 100%;
-    margin-top: 30px;
-    tr{
-        th{
-            border: 1px solid #b9b9b982;
-            padding: 10px;
+.sizeAndBuy{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .sizeFilter{
+        position: relative;
+        display: flex;
+        width: 60%;
+        .inStock{
+            display: inline-block;
         }
-        td{
-            border: 1px solid #b9b9b982;
-            text-align: center;
-            padding: 10px 14px;
-            color: grey;
+        form{
+            width: 100%;
+            button{
+                display: none;
+            }
+        }
+        .modelSelect{
             display: none;
         }
-        .inStock{
-            background: linear-gradient(0deg, white -20%, #baadc3 91%);
-            color: black;
-            display: table-cell;
+        .brandSelect{
+          position: relative;
+          .showBrandsName-enter-active,
+          .showBrandsName-enter-done{
+            border: 1px solid #19181838;
+            z-index: 10;
+            box-shadow: 0px 6px 15px -6px rgba(0,0,0,0.75);
+            height: 200%;
+          }
+        }
+        .iconInput{
+          width: fit-content;
+          position: absolute;
+          right: 15%;
+          top: 60%;
+          transition: .4s;
+        }
+    
+      p{
+        font-weight: 400;
+        font-size: 20px;
+      }
+      input{
+            cursor: pointer;
+            padding: 10px;
+            outline: none;
+            background: white;
+        }
+        .mainInput{
+        
+            border: 1px solid #19181838;
+            width: 90%;
+            border-radius: 5px;
+            transition: .4s;
+            background:transparent;
+        }
+        .mainInput:hover{
+          color: black;  
+          background: #baadc3;       
+        }
+        .mainInput:hover ~ .iconInput{ 
+          color: black!important;
+        }
+    }
+    .brandsName{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    input{
+        display: none;
+        border: none;
+    }
+    input:hover
+    {
+        background:#eee7f3;
+    }
+    }
+    .buyAndBasket{
+        width: 25%;
+        button{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid#b692d0;
+            background: #b692d0;
+            color: white;
+            transition: background .4s,
+                        color .4s;
+            &:hover{
+                background: #b692d0;
+                color: white;
+            }
         }
     }
 }
+
+
 
 .detailsTable{
     width: 100%;

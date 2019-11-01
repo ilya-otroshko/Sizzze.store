@@ -90,8 +90,8 @@ export default class HeaderMob extends Component {
       outerContainerId={ "outer-container" }
       right
       onStateChange={(state) => this.handleStateChange(state)}
-      isOpen={this.state.menuOpen}>
-
+      isOpen={this.state.menuOpen}
+      >
 
         <OutsideClickHandler
          onOutsideClick={() => {

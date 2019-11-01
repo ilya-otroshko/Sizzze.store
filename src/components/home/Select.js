@@ -12,7 +12,7 @@ export default class Select extends Component {
       this.state = {
             isBrandListVisible: false,
             isModelListVisible: false,
-            brandValue: 'all',
+            brandValue: props.brandValue,
             modelValue: 'all'};
       this.handleChangeBrand = this.handleChangeBrand.bind(this);
       this.handleChangeModel = this.handleChangeModel.bind(this);
@@ -139,6 +139,7 @@ export default class Select extends Component {
                             readOnly
                             onClick={this.handleChangeBrand}
                             key={input.id}
+                            className={input.stock}
                             />
                             )}
                     </div>

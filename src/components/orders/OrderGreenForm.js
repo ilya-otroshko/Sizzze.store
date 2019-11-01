@@ -6,7 +6,6 @@ export default class OrderGreenForm extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      payment: ' hi ',
       paymentMethod: [
         {id: 'cash', name: 'Наложенный платеж'}
       ],
@@ -49,6 +48,7 @@ export default class OrderGreenForm extends Component{
                       <p>Всего:</p>
                       <p>{this.props.sum} грн</p>
                     </div>
+                    
                     <div>
                       <button 
                       className="submitOrder"

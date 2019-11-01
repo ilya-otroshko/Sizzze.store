@@ -32,6 +32,7 @@ export default class SizeFilter extends Component {
             title1={'Size'}
             colorIcon={'black'}
             bg={'#e9cbff'}
+            brandValue={'all'}
             />
 
         </div>
