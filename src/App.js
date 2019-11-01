@@ -6,12 +6,12 @@ import HeaderMob from './components/header/HeaderMob';
 import HeaderPC from './components/header/HeaderPC';
 import Product from './pages/Product';
 import Order from './components/orders/Order';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
- class App extends Component{
+ export default class App extends Component{
 
   render(){
-    console.log(this.props.testStore)
+    // console.log(this.props.testStore)
     return (
      <BrowserRouter>
       <HeaderMob  />
@@ -32,12 +32,12 @@ import { connect } from 'react-redux';
   }
   
   }
-  export default connect(
-    state => ({
-      testStore: state
-    }),
-    dispatch => ({})
-  )(App);
+  // export default connect(
+  //   state => ({
+  //     testStore: state
+  //   }),
+  //   dispatch => ({})
+  // )(App);
  
  
 
