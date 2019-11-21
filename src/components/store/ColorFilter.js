@@ -15,15 +15,15 @@ export default class ColorFilter extends Component {
     const colors = new Array(8)
     .fill('')
     .map( (_, i) => ( {id:i, 
-        value:["red", "white", "black", "green", "blue", "pink", "yellow", "gray"]} ) )  
+        value:["rgb(228, 50, 58)", "white", "black", "rgb(119, 216, 80)", "rgb(8, 114, 187)", "rgb(235, 145, 230)", "rgb(238, 239, 68)", "rgb(204, 204, 204)"]} ) )  
     return (
         <div className="colorFilter">
-                <p>Color</p>
+                <p>цвет</p>
             <ul>
             {colors.map(color =>(
                 <li key={color.id}>
                 <NavLink
-            to={`/color/${color.value[color.id]}`}
+            to={`store`}
             style={{background: color.value[color.id]}}>
             </NavLink>
                 </li>

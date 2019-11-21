@@ -17,13 +17,13 @@ export default function Sale(){
                 to="/store" 
                 className="saleLink">
              <h4>
-                  SALE!
+                  sale!
               </h4>
             </NavLink>
             <NavLink 
                 to="sale" 
                 className="saleLink">
-              <p>Show me!</p>
+              <p>посмотреть!</p>
             </NavLink>
           </div>
       </section>

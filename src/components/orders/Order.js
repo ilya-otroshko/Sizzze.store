@@ -1,8 +1,6 @@
 import React,{Component} from 'react';
 
-import BasketItems from '../basket/BasketItems';
 import OrderGreenForm from './OrderGreenForm';
-import OrderResidentForm from './OrderResidentForm';
 
 
 export default class Order extends Component{
@@ -50,7 +48,7 @@ export default class Order extends Component{
             <div className="container-fluid">
                 <div className="orderForm">  
 
-                <div className="residentOrGreen">
+                {/* <div className="residentOrGreen">
                     <button 
                             onClick={this.green}
                             style={{
@@ -68,19 +66,21 @@ export default class Order extends Component{
                                 color: this.state.residentCol }}>
                                 я постоянный клиент
                         </button>
-                </div>      
+                </div>       */}
                     
-
-                    {this.state.orderForm === 'green' &&(
+                    <OrderGreenForm 
+                        sum={1650}/>
+                    {/* {this.state.orderForm === 'green' &&(
                         <OrderGreenForm 
                         sum={1650}/>
                     )}
                      {this.state.orderForm === 'resident' &&(
                         <OrderResidentForm />
-                    )}
+                    )} */}
                     </div>
-                    {this.state.orderForm === 'green' &&(
-                        <div className="basket">
+                    {/* {this.state.orderForm === 'green' &&( */}
+                        
+                        {/* <div className="basket">
                             <h3>Ваш заказ</h3>
                             <div className="fullBasket">
                             <BasketItems
@@ -93,7 +93,7 @@ export default class Order extends Component{
                                 </div>
                             </div>
                         </div>
-                    )}
+                    )} */}
             </div>
 
         </div>

@@ -1,7 +1,8 @@
 /////////////////////////////////  . HEADER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 .headerPC{
-  height: 148px;   
+  height: 150px;
+  background: #484c7f; 
 }
 a:hover{
   text-decoration: none;
@@ -9,16 +10,17 @@ a:hover{
 h1{
     font-size: 70px;
     text-align: center;
-    color: black;
+    color: #f1d4d4;
+    margin-bottom: 0;
   }
 
   nav{
-    background: white;
     width: 100%;
-    margin: 20px 0px;
+    margin: 5px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #484c7f; 
   }
 
   .navScroll{
@@ -29,6 +31,9 @@ h1{
     top: -1px;
     box-shadow: 0px 1px 5px #0000004f;
     .pageNav{
+      .brandsNav{
+        margin-top: 20px;
+      }
       .secondLi{
         margin: 0px 5px;
       }
@@ -45,10 +50,12 @@ h1{
     opacity: 0;
     transform: translateY(-20px);
     a{
-      color: black;
+      color: #f1d4d4;
       text-decoration: none;
       p{
         margin: 0;
+        color: #f1d4d4;
+        font-size: 20px;
       }
     }
       
@@ -64,7 +71,7 @@ h1{
       transform: translateX(-50%); 
       width: 0;
       height: 1px;
-      background-color: #d298ff; 
+      background-color: #ddb6c6;
       content: "";
       transition: width 0.3s ease-out;
     }
@@ -92,13 +99,11 @@ h1{
         .pagelink:focus{
             padding: 25px 0px;
             margin:10px 20px;
-            color: grey;
+            color: #f1d4d4;
             outline: none;
             text-decoration: none;
             position: relative;
-          }
-          .pagelink:hover {
-            color: black;
+            font-size: 20px;
           }
           .pagelink:after {
             display: block;
@@ -107,7 +112,7 @@ h1{
             transform: translateX(-50%); 
             width: 0;
             height: 1px;
-            background-color: #d298ff; 
+            background-color: #ddb6c6;
             content: "";
             transition: width 0.3s ease-out;
           }
@@ -128,7 +133,7 @@ h1{
           transform: translateX(-50%); 
           width: 0;
           height: 1px;
-          background-color: #d298ff; 
+          background-color: #ddb6c6; 
           content: "";
           transition: width 0.3s ease-out;
         }
@@ -139,16 +144,16 @@ h1{
           }
 
         svg{
-          color: #d298ff;
+          color: #ddb6c6;
         }
       }
   .brandsNav
         {
           padding-top: 10px;
           width: 80%;
-          margin-top: 20px;
+          margin-top: 14px;
           list-style: none;
-          background: white;
+          background: #f1d4d4;
           box-shadow: 0px 0px 7px 1px #00000026;
           display: flex;
           flex-direction: column;
@@ -156,12 +161,12 @@ h1{
           position: absolute;
           z-index: 999;
           a{
-            color: grey;
+            color: #484c7f;
             text-decoration: none;
             margin: 15px;
           }
           li:hover{
-            background: #e9cbff;
+            background: #ac8daf;
           }
           li:not(:first-child){
             margin-top: 10px;
@@ -173,7 +178,7 @@ h1{
 
     .brandsIcon{
         margin-left: 5px;
-        height: 13px;
+        height: 17px;
     }
   }
 
@@ -188,21 +193,22 @@ h1{
     position: relative;
     width: fit-content;
     margin: 0 auto;
+    padding-top: 15px;
     width: -moz-fit-content;
       div{
         cursor: pointer;
         position: absolute;
-        top: 6%;
+        top: 20%;
         left: 8.5%;
         display: flex;
         justify-content: center;
         height: 20px;
         width: 19px;
-        background: white;
+        background: #484c7f;
         font-size: 19px;
         align-items: center;
           svg{
-            color: black;
+            color: #f1d4d4;
             transition: transform .5s,
                         color .6s;
             animation: instaHover 1s alternate-reverse;
@@ -211,7 +217,7 @@ h1{
     div:hover{
       svg{
         transform: rotate(360deg);
-        color: #d298ff;
+        color: #ac8daf;
       }
     }
   }
@@ -236,8 +242,8 @@ h1{
 
 @keyframes instaHover{
   from { transform: rotate(0deg);
-        color: black;}
+        color: #f1d4d4;}
   to { transform: rotate(360deg);
-        color: #d298ff;}
+        color: #ac8daf;}
 }
 /////////////////////////////////  . HEADER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  

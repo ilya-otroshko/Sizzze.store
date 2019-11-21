@@ -2,8 +2,6 @@ import React,{Component} from 'react'
 
 import {NavLink} from 'react-router-dom'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import Select from '../home/Select';
 
 export default class ProductInfo extends Component {
@@ -97,22 +95,16 @@ export default class ProductInfo extends Component {
                   <td>
                     <NavLink to={`/color/${this.state.color}`}>
                       {this.state.color} 
-                      <FontAwesomeIcon 
-                        icon={faCaretDown} />
                     </NavLink>
                   </td>
                   <td>
                     <NavLink to={`/gender/${this.state.gender}`}>
                       {this.state.gender}
-                      <FontAwesomeIcon 
-                        icon={faCaretDown} />
                     </NavLink>
                   </td>
                   <td>
                     <NavLink to={`/country/${this.state.country}`}>
                       {this.state.country}
-                      <FontAwesomeIcon 
-                        icon={faCaretDown} />
                     </NavLink>
                   </td>
               </tr>

@@ -22,6 +22,7 @@ export default class Store extends Component{
 
     const stok = [40, 41, 42, 43, 44]
     return (
+      <div className="storeWrapper">
         <div className="container store">   
           <StoreHeader />
           <div className="barAndProducts">
@@ -34,6 +35,7 @@ export default class Store extends Component{
             />
           </div>
         </div>
+      </div>
     )
   }
   }

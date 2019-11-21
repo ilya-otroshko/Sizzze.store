@@ -1,8 +1,17 @@
     /////////////////////////////////  . SIDEBAR . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+.storeWrapper{
+    background: #484c7f;
+    padding-bottom: 50px;
+    h2{
+    color: #f1d4d4;
+    font-size: 50px;
+    margin-left: 70px;
+    }
+}
 .store{
     display: flex;
     flex-direction: column;
+    padding: 0;
     .showFilter{
         display: none;
     }
@@ -11,29 +20,36 @@
     }
     .sidebar{
         width: 25%;
+        margin-left: 10px;
         /////////////////////  . PRICE RANGE . \\\\\\\\\\\\\\\\\\
         .priceRange{
             display: flex;
             flex-direction: column;
             p:first-child{
                 font-size: 20px;
-                color: gray;
+                color: #f1d4d4;
+                background: #484c7f;
                 margin: 15px 0px;
+                margin-left: -10px;
+                padding-left: 10px;
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
             }
             p:last-child{
                 margin: 15px 0px;
             }
             .input-range{
                 width: 90%;
+                margin: 0 auto;
                 .input-range__label{
                     display: none;
                 }
                 .input-range__track--active{
-                    background: #e9cbff;
+                    background: #ddb6c6;
                 }
                 .input-range__slider {
-                    background: #d298ff;
-                    border: 1px solid #d298ff;
+                    background: #ddb6c6;
+                    border: 2px solid #484c7f;
                     height: 1.2rem;
                     width: 1.2rem;
                     margin-top: -0.76rem;
@@ -41,8 +57,8 @@
                 }
                 .input-range__slider:active{   
                     transform: scale(1.5);
-                    background: white;
-                    border: 2px solid #d298ff;
+                    background: #f1d4d4;
+                    border: 2px solid #484c7f;
                 }
             }
         } 
@@ -55,6 +71,20 @@
             position: relative;
             display: flex;
             width: 100%;
+            .scrollbarsClass{
+                border:1px solid #ffffff8c;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                margin-top: -3px;
+                height: 170%!important;
+                position: absolute!important;
+                width: 100%!important;
+                div:nth-child(3){
+                div{
+                    background-color: #484c7f!important;
+                }
+                }
+            }
             form{
                 width: 100%;
                 button{
@@ -77,35 +107,43 @@
             .iconInput{
               width: fit-content;
               position: absolute;
-              right: 15%;
+              right: 5%;
               top: 60%;
               transition: .4s;
+              color: #484c7f;
             }
 
           p{
-            color: gray;
-            font-weight: 400;
             font-size: 20px;
+            color: #f1d4d4;
+            background: #484c7f;
+            margin: 15px 0px;
+            margin-left: -10px;
+            padding-left: 10px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
           }
           input{
                 cursor: pointer;
                 padding: 10px;
                 outline: none;
-                background: white;
+                background: #ddb6c6;
+                color: #484c7f;
             }
             .mainInput{
-              border: 1px solid #19181838;
-                width: 90%;
+                border: 1px solid #19181838;
+                width: 100%;
                 border-radius: 5px;
                 transition: .4s;
-                background:transparent;
+                background:#ddb6c6;
+                color: #484c7f;
             }
             .mainInput:hover{
-              color: black;  
-              background: #e9cbff;       
+                color: #f1d4d4;
+                background: #ac8daf;      
             }
             .mainInput:hover ~ .iconInput{ 
-              color: black!important;
+              color: #f1d4d4!important;
             }
         }
 
@@ -114,24 +152,16 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        background: white;
+        background: #ac8daf;
         input{
             border: none;
         }
         input:hover
         {
-            background:rgb(241, 241, 241);
-            color: rgb(193, 193, 193);
+            background:#f1d4d4;
+            color: #484c7f;
         }
     }
-
-.showBrandsName-enter-active {
-    // animation: fade 300ms;
-  }
-
-.showBrandsName-exit-active {
-    // animation: fade 300ms alternate-reverse;
-  }
 }
 
         ////////////////////////  . SIZE FILTER . \\\\\\\\\\\\\\\\\\
@@ -142,17 +172,23 @@
 
 
         .colorFilter{
-            width: 90%;
+            width: 100%;
             height: 150px;
             p{
                 font-size: 20px;
-                color: gray;
+                color: #f1d4d4;
+                background: #484c7f;
                 margin: 15px 0px;
+                margin-left: -10px;
+                padding-left: 10px;
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
             }
             ul{
                 padding: 0;
                 list-style: none;
                 li{
+                    cursor: pointer;
                     float: left;
                     width: 15%;
                     height: 35px;
@@ -163,12 +199,14 @@
                     a{
                         border-radius: 50%;
                         padding: 15px;
-                        box-shadow: 0 0 3px 1px black;
-                        transition: transform .4s;
+                        box-shadow: 0 0 3px 0px #0000007a;
+                        transition: transform .6s;
                     }
-                    a:hover{
-                        transform: rotate3d(1, 1, 1, 360deg)
-                    }
+                }
+                li:hover{
+                    a{
+                        transform: rotate3d(1, 1, 1, 720deg);
+                    }  
                 }
             }
         }
@@ -180,7 +218,7 @@
         .gender{
             display: flex;
             flex-direction: column;
-            width: 90%;
+            width: 100%;
             div{
                 .checkbox {
                     position: absolute;
@@ -218,19 +256,24 @@
                     transition: .2s;
                 }
                 .checkbox:checked + label:before {
-                    background: #d298ff;
+                    background: #ac8daf;
                 }
                 .checkbox:checked + label:after {
                     left: 26px;
                 }
-                .checkbox:focus + label:before {
-                    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px #e9cbff;
+                .checkbox:hover + label:before {
+                    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px #ac8daf;
                 }
             }
             p{
                 font-size: 20px;
-                color: gray;
+                color: #f1d4d4;
+                background: #484c7f;
                 margin: 15px 0px;
+                margin-left: -10px;
+                padding-left: 10px;
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
             }
         }
         
@@ -246,8 +289,13 @@
             .brandFilter{
                 p{
                     font-size: 20px;
-                    color: gray;
+                    color: #f1d4d4;
+                    background: #484c7f;
                     margin: 15px 0px;
+                    margin-left: -10px;
+                    padding-left: 10px;
+                    border-bottom-right-radius: 5px;
+                    border-top-right-radius: 5px;
                 }
                 ul{
                      list-style: none;
@@ -264,7 +312,7 @@
                          }
                     
                         a:hover{
-                            color: #d298ff;
+                            color: #ac8daf;
                         }
                      }
                 }
@@ -283,6 +331,8 @@
     .barAndProducts{
         display: flex;
         justify-content: space-between;
+        background: white;
+        border-radius: 10px;
         .productsList{
             width: 70%;
             ul{
@@ -302,13 +352,11 @@
                         .cardBlock{
                             transition: box-shadow .4s;
                             border-radius: 10px;
-                            box-shadow: 0 0 1px #7d7d7d96;
-
                         }
                         .cardBlock:hover{
-                            box-shadow: 0 0 13px black;
+                            box-shadow: 0 0 13px #000000a1;
                             .infoSlider{
-                                border-top: 1px solid black;
+                              border-top: 1px solid #0000006e;
                             }
                         }
                         img{

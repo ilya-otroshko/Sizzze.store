@@ -17,8 +17,7 @@ export default function SlideBlock(props){
             {props.name && (
                 <div className="infoSlider">
                     <h3>{props.name}</h3>
-                    <p>{props.price}uah</p>
-                    <span>In stok: {props.stok.join(', ')}</span>
+                    <p>{props.price}грн</p>
                 </div>
             )}
                 

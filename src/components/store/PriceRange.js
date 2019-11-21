@@ -16,14 +16,14 @@ export default class PriceRange extends Component {
     return (
 
         <div className="priceRange">
-            <p>Price filter</p>
+            <p>фильтр по цене</p>
           <InputRange
             step={10}
             maxValue={1000}
             minValue={230}  
             onChange={value => this.setState({ value: value })}
             value={this.state.value} />
-          <p>Price: {this.state.value.min}uah -- {this.state.value.max}uah</p>
+          <p>цена: {this.state.value.min}грн -- {this.state.value.max}грн</p>
         </div>
       
     );

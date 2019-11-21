@@ -9,9 +9,9 @@ export default class Gender extends Component {
  
     this.state = {
       genders: [
-        {id: 'female', name: 'Female'},
-        {id: 'male', name: 'Male'},
-        {id: 'unisex', name: 'Unisex'}
+        {id: 'female', name: 'женский'},
+        {id: 'male', name: 'мужской'},
+        {id: 'unisex', name: 'унисекс'}
       ]
     };
   }
@@ -20,7 +20,7 @@ export default class Gender extends Component {
    
     return (
         <div className="gender">
-            <p>Gender</p>
+            <p>пол</p>
             {this.state.genders.map(gender => (
               <div key={gender.id}>
               <input type="checkbox" className="checkbox" id={gender.id} defaultChecked={this.state.chkbox} onChange={this.handleChangeChk} />

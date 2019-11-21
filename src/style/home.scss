@@ -7,7 +7,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        filter: brightness(0.7);
+        filter: brightness(0.6);
         z-index: 6;
         object-fit: cover;
       }
@@ -42,77 +42,86 @@
                     right: 15%;
                     top: 60%;
                     transition: .4s;
+                    color: #484c7f;
                   }
 
                 p{
-                  color: white;
-                  font-weight: 400;
+                  color: #484c7f;
+                  width: fit-content;
+                  background: #f1d4d4;
+                  border-radius: 5px;
+                  padding: 3px 5px;
                 }
                 input{
-                      cursor: pointer;
-                      padding: 10px;
-                      outline: none;
-                      background: rgba(72, 72, 72, 0.6);
-                      color: white;
-                  }
+                  cursor: pointer;
+                  padding: 10px;
+                  outline: none;
+                  background: #f1d4d4;
+                  color: #484c7f;
+                }
                   .brandsName{
                     position: relative;
                     display: flex;
                     flex-direction: column;
-                    padding-top: 1px;
                     input{
                         border: none;
                     }
                     input:hover
                     {
-                        background:rgb(241, 241, 241);
-                        color: black;
+                        background:#ac8daf;
+                        color: #484c7f;
                     }
                 }
                   .mainInput{
                     border: 1px solid #ffffff8c;
-                      width: 90%;
-                      border-radius: 5px;
-                      background:rgba(255, 255,255, .6);
-                      transition: .4s;
-                      color: black;
+                    width: 90%;
+                    border-radius: 5px;
+                    background:#f1d4d4;
+                    transition: .4s;
+                    color: #484c7f;
                   }
                   .mainInput:hover{
-                    background: rgba(72, 72, 72, 0.6);
-                    color: white;         
+                    background: #484c7f;;
+                    color: #f1d4d4;         
                   }
                   .mainInput:hover ~ .iconInput{ 
-                    color: white!important;
+                    color: #f1d4d4!important;
                   }
                   
               }
               button{
                   padding: 11px 20px;
                   box-shadow: 0px 0px 7px 1px #00000026;
-                  background: rgba(255, 255, 255, 0.6);
+                  background: #484c7f;
+                  color: #f1d4d4;
                   outline: none;
                   border: none;
-                  margin-top: 40px;
+                  margin-top: 46px;
                   border-radius: 5px;
                   transition: .4s;
                   z-index: 1;
               }
               button:hover{
-                  background: #e9cbff;
+                  background: #f1d4d4;
+                  color: #484c7f;
               }
           }
       }   
     }
 
       .scrollbarsClass{
-        border: 2px solid #ffffff8c;
+        border:1px solid #ffffff8c;
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
         margin-top: -3px;
         height: 170%!important;
         position: absolute!important;
         width: 90%!important;
-        padding-top: 20px;
+        div:nth-child(3){
+          div{
+            background-color: #484c7f!important;
+          }
+        }
       }
 
       .showBrandsName-enter-active {
@@ -133,13 +142,14 @@
 
 .newItems
 {
-  background: linear-gradient(0deg, white 50%, #baadc3 100%);
+  background: linear-gradient(0deg, white 50%, #f1d4d4 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   h2{
     margin: 30px;
+    color: #484c7f;
   }
 }
 .slickSlider{
@@ -155,24 +165,21 @@
     margin: 0 auto;
     border-radius: 10px;
     cursor: pointer;
-    transition: box-shadow .2s;
+    transition: box-shadow .2s,
+                transform 1s;
     img{
       width: 100%;
-      border-radius: 10px;
     }
   }
   .blockInSlider:hover{
     -webkit-box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
     -moz-box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
     box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
-
+    transform: scale(1.15);
     .infoSlider{
-      border-top: 1px solid black;
-      h3{
-        transform: translateY(-10px);
-      }
+      background: #f1d4d4;
       p{
-        transform: translateY(-20px);
+        color: #484c7f;
       }
     }
   }
@@ -201,17 +208,16 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #a0a0a01a;
-  transition: border-top .4s;
+  border-top: 1px solid #a0a0a099;
+  transition: background 1s;
   h3{
-    font-weight: bold;
     font-size: 20px;
     transition: transform .4s;
   }
   p{
-    font-weight: bold;
-    color: #d298ff;
-    transition: transform .4s;
+    color: #ddb6c6;
+    transition: transform .4s,
+                color 1s;
   }
   span{
     font-size: 13px;  
@@ -258,19 +264,20 @@
   div{
     position: absolute;
     z-index: 3;
-    color: white;
+    color: #f1d4d4;
     top: 50%;
     left: 10%;
     .saleLink{
-      color: white;
+      color: #f1d4d4;
       text-decoration: none;
       h4{
         font-size: 50px;
         font-weight: bold;
         transition: .4s;
+        color: #484c7f;
       }
       h4:hover{
-        color:#d298ff;
+        color:#f1d4d4;
       }
       p{
         margin-top: 40px;
@@ -279,16 +286,16 @@
       p:after {
         display: block;
         position: absolute;
-        left: 27%; 
+        left: 45%; 
         transform: translateX(-50%); 
-        width: 60%;
+        width: 100%;
         height: 3px;
-        background-color: #d298ff; 
+        background-color: #484c7f; 
         content: "";
         transition: width 0.3s ease-out;
       }
       p:hover{
-        color: #e9cbff;
+        color: #484c7f;
       }
       p:hover:after,
       p:focus:after {
@@ -315,7 +322,7 @@
     object-fit: cover;
     position: absolute;
     z-index: 2;
-    filter: brightness(.8);
+    filter: brightness(.6);
   }
   .leftArrivals,
   .rightArrivals{
@@ -334,27 +341,28 @@
           text-decoration: none;
         
           p{
-            color: white;
+            color: #f1d4d4;
             font-size: 30px;
             font-weight: bold;
             margin-bottom: 20px;
             transition: .4s;
           }
           p:hover{
-            color: #e9cbff;
+            color: #ddb6c6;
           }
           button{
-            color: white;
-            background: transparent;
+            color: #f1d4d4;
+            background: #484c7f;
             padding: 15px 30px;
-            border: 2px solid white;
+            border: 3px solid #484c7f;
             border-radius: 5px;
             text-decoration: none;
             transition: .4s;
           }
           button:hover{
-            background: #d298ff;
-            border: 2px solid #d298ff;
+            background: #f1d4d4;
+            color: #484c7f;
+            border: 3px solid #484c7f;
           }
         }
       }

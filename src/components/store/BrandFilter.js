@@ -15,11 +15,11 @@ export default class BrandFilter extends Component {
   render() {
     return (
         <div className="brandFilter">
-          <p>Brand</p>
+          <p>бренд</p>
             <ul>
             {this.state.brands.map((brand, index) =>(
               <li key={'brand-' + index}>
-              <NavLink to={`/${brand}`}> {brand} </NavLink>
+              <NavLink to={`/store`}> {brand} </NavLink>
               </li>
             ))}
             </ul>

@@ -8,7 +8,7 @@ export default class SizeFilter extends Component {
  
     this.state = {
       size: [
-        {id: 'all', name: 'all'},
+        {id: 'all', name: 'все'},
         {id: '36', name: '36'},
         {id: '37', name: '37'},
         {id: '38', name: '38'},
@@ -29,10 +29,10 @@ export default class SizeFilter extends Component {
 
             <Select 
             brandName={this.state.size}
-            title1={'Size'}
-            colorIcon={'black'}
-            bg={'#e9cbff'}
-            brandValue={'all'}
+            title1={'размер'}
+            colorIcon={'#484c7f'}
+            bg={'#ac8daf'}
+            brandValue={'все'}
             />
 
         </div>

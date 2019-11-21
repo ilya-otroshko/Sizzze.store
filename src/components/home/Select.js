@@ -13,13 +13,13 @@ export default class Select extends Component {
             isBrandListVisible: false,
             isModelListVisible: false,
             brandValue: props.brandValue,
-            modelValue: 'all'};
+            modelValue: 'все'};
       this.handleChangeBrand = this.handleChangeBrand.bind(this);
       this.handleChangeModel = this.handleChangeModel.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       this.myRef = React.createRef();
     }
-  
+
     handleChangeBrand(event) {
       this.setState({brandValue: event.target.value})
       this.clickOutBrand();
@@ -47,7 +47,7 @@ export default class Select extends Component {
             : 
         this.setState({
            transformIconBrand : 'rotate(180deg)', 
-           colorBrand: 'white', 
+           colorBrand: '#f1d4d4', 
            bg: this.props.bg})
     }; 
 
@@ -79,7 +79,7 @@ export default class Select extends Component {
             bg2: ''
         }) : this.setState({
            transformIconModel : 'rotate(180deg)', 
-           colorModel: 'white',
+           colorModel: '#f1d4d4',
            bg2: this.props.bg })
     }; 
      render() {
@@ -208,7 +208,7 @@ export default class Select extends Component {
                 </div>
          </div>
                     <div>
-                    <button type="button"  onClick={this.handleSubmit}>find</button>
+                    <button type="button"  onClick={this.handleSubmit}>есть че</button>
 
                     </div>
          

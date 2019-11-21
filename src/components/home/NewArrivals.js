@@ -13,11 +13,11 @@ export default function NewArrivals(){
              <div>
              <NavLink 
                 to="/store">
-                 <p>We have new models!</p>
+                 <p>новые модели!</p>
                  </NavLink>
                  <NavLink 
                 to="/store">
-                 <button>Show me</button>   
+                 <button>покажи</button>   
                 </NavLink>
              </div>
             <img src={left} alt=""/>
@@ -27,11 +27,11 @@ export default function NewArrivals(){
          <div>
                  <NavLink 
                 to="/store">
-                 <p>Replenish Availability!</p>
+                 <p>пополнили наличие!</p>
                  </NavLink>
                  <NavLink 
                 to="/store">
-                    <button>Show me</button> 
+                    <button>покажи</button> 
                 </NavLink>
              </div>
             <img src={right} alt=""/>

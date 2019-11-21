@@ -54,14 +54,14 @@ render(){
             <NavLink 
                 to="/" 
                 className="pagelink">
-            Main
+            главная
             </NavLink>
         </li>
         <li className="secondLi">
             <NavLink 
                 to="/store" 
                 className="pagelink">
-            Store
+            магазин
             </NavLink>
         </li>
         
@@ -70,7 +70,7 @@ render(){
                 <NavLink 
                 to="/store" 
                 className="pagelink">
-                Brands
+                бренды
                 <FontAwesomeIcon 
                 icon={faChevronDown} 
                 className="brandsIcon"
