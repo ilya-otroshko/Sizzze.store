@@ -1,8 +1,7 @@
 /////////////////////////////////  . HEADER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
 .headerPC{
   height: 150px;
-  background: #484c7f; 
+  background: $first; 
 }
 a:hover{
   text-decoration: none;
@@ -10,7 +9,7 @@ a:hover{
 h1{
     font-size: 70px;
     text-align: center;
-    color: #f1d4d4;
+    color: $forth;
     margin-bottom: 0;
   }
 
@@ -20,7 +19,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #484c7f; 
+    background: $first; 
   }
 
   .navScroll{
@@ -50,11 +49,11 @@ h1{
     opacity: 0;
     transform: translateY(-20px);
     a{
-      color: #f1d4d4;
+      color: $forth;
       text-decoration: none;
       p{
         margin: 0;
-        color: #f1d4d4;
+        color: $forth;
         font-size: 20px;
       }
     }
@@ -71,7 +70,7 @@ h1{
       transform: translateX(-50%); 
       width: 0;
       height: 1px;
-      background-color: #ddb6c6;
+      background-color: $third;
       content: "";
       transition: width 0.3s ease-out;
     }
@@ -99,7 +98,7 @@ h1{
         .pagelink:focus{
             padding: 25px 0px;
             margin:10px 20px;
-            color: #f1d4d4;
+            color: $forth;
             outline: none;
             text-decoration: none;
             position: relative;
@@ -112,7 +111,7 @@ h1{
             transform: translateX(-50%); 
             width: 0;
             height: 1px;
-            background-color: #ddb6c6;
+            background-color: $third;
             content: "";
             transition: width 0.3s ease-out;
           }
@@ -133,7 +132,7 @@ h1{
           transform: translateX(-50%); 
           width: 0;
           height: 1px;
-          background-color: #ddb6c6; 
+          background-color: $third; 
           content: "";
           transition: width 0.3s ease-out;
         }
@@ -144,7 +143,7 @@ h1{
           }
 
         svg{
-          color: #ddb6c6;
+          color: $forth;
         }
       }
   .brandsNav
@@ -153,7 +152,7 @@ h1{
           width: 80%;
           margin-top: 14px;
           list-style: none;
-          background: #f1d4d4;
+          background: $third;
           box-shadow: 0px 0px 7px 1px #00000026;
           display: flex;
           flex-direction: column;
@@ -161,12 +160,12 @@ h1{
           position: absolute;
           z-index: 999;
           a{
-            color: #484c7f;
+            color: $forth;
             text-decoration: none;
             margin: 15px;
           }
           li:hover{
-            background: #ac8daf;
+            background: $second;
           }
           li:not(:first-child){
             margin-top: 10px;
@@ -204,11 +203,11 @@ h1{
         justify-content: center;
         height: 20px;
         width: 19px;
-        background: #484c7f;
+        background: $first;
         font-size: 19px;
         align-items: center;
           svg{
-            color: #f1d4d4;
+            color: $forth;
             transition: transform .5s,
                         color .6s;
             animation: instaHover 1s alternate-reverse;
@@ -217,7 +216,7 @@ h1{
     div:hover{
       svg{
         transform: rotate(360deg);
-        color: #ac8daf;
+        color: $third;
       }
     }
   }
@@ -242,8 +241,8 @@ h1{
 
 @keyframes instaHover{
   from { transform: rotate(0deg);
-        color: #f1d4d4;}
+        color: $forth;}
   to { transform: rotate(360deg);
-        color: #ac8daf;}
+        color: $third;}
 }
 /////////////////////////////////  . HEADER . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  

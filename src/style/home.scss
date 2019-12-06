@@ -42,13 +42,13 @@
                     right: 15%;
                     top: 60%;
                     transition: .4s;
-                    color: #484c7f;
+                    color: $forth;
                   }
 
                 p{
-                  color: #484c7f;
+                  color: $forth;
                   width: fit-content;
-                  background: #f1d4d4;
+                  background: $first;
                   border-radius: 5px;
                   padding: 3px 5px;
                 }
@@ -56,8 +56,8 @@
                   cursor: pointer;
                   padding: 10px;
                   outline: none;
-                  background: #f1d4d4;
-                  color: #484c7f;
+                  background: $first;
+                  color: $forth;
                 }
                   .brandsName{
                     position: relative;
@@ -68,32 +68,32 @@
                     }
                     input:hover
                     {
-                        background:#ac8daf;
-                        color: #484c7f;
+                        background:$forth;
+                        color: $third;
                     }
                 }
                   .mainInput{
                     border: 1px solid #ffffff8c;
                     width: 90%;
                     border-radius: 5px;
-                    background:#f1d4d4;
+                    background:$first;
                     transition: .4s;
-                    color: #484c7f;
+                    color: $forth;
                   }
                   .mainInput:hover{
-                    background: #484c7f;;
-                    color: #f1d4d4;         
+                    background: $third;
+                    color: $forth;         
                   }
                   .mainInput:hover ~ .iconInput{ 
-                    color: #f1d4d4!important;
+                    color: $third!important;
                   }
                   
               }
               button{
                   padding: 11px 20px;
                   box-shadow: 0px 0px 7px 1px #00000026;
-                  background: #484c7f;
-                  color: #f1d4d4;
+                  background: $third;
+                  color: $first;
                   outline: none;
                   border: none;
                   margin-top: 46px;
@@ -102,8 +102,8 @@
                   z-index: 1;
               }
               button:hover{
-                  background: #f1d4d4;
-                  color: #484c7f;
+                  background: $second;
+                  color: $forth;
               }
           }
       }   
@@ -119,7 +119,7 @@
         width: 90%!important;
         div:nth-child(3){
           div{
-            background-color: #484c7f!important;
+            background-color: $forth!important;
           }
         }
       }
@@ -142,14 +142,14 @@
 
 .newItems
 {
-  background: linear-gradient(0deg, white 50%, #f1d4d4 100%);
+  background: linear-gradient(0deg, white 50%, $first 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   h2{
     margin: 30px;
-    color: #484c7f;
+    color: $forth;
   }
 }
 .slickSlider{
@@ -177,9 +177,9 @@
     box-shadow: 0px 45px 69px -56px rgba(0,0,0,0.94);
     transform: scale(1.15);
     .infoSlider{
-      background: #f1d4d4;
+      background: $first;
       p{
-        color: #484c7f;
+        color: $third;
       }
     }
   }
@@ -196,8 +196,13 @@
   z-index: 150;
 
   svg{
+    color: $third;
     font-size: 50px;
     cursor: pointer;
+    transition: color .4s;
+    &:hover{
+      color: $second;
+    }
   }
 }
 .prevArrow{
@@ -215,7 +220,7 @@
     transition: transform .4s;
   }
   p{
-    color: #ddb6c6;
+    color: $third;
     transition: transform .4s,
                 color 1s;
   }
@@ -264,38 +269,40 @@
   div{
     position: absolute;
     z-index: 3;
-    color: #f1d4d4;
+    color: $third;
     top: 50%;
     left: 10%;
     .saleLink{
-      color: #f1d4d4;
+      color: $first;
       text-decoration: none;
       h4{
-        font-size: 50px;
+        font-size: 100px;
         font-weight: bold;
         transition: .4s;
-        color: #484c7f;
+        color: $second;
+        margin-top: -50px;
       }
       h4:hover{
-        color:#f1d4d4;
+        color:$first;
       }
       p{
-        margin-top: 40px;
+        margin-top: 30px;
         transition: color 0.3s;
+        font-size: 25px;
       }
       p:after {
         display: block;
         position: absolute;
-        left: 45%; 
+        left: 35%; 
         transform: translateX(-50%); 
         width: 100%;
         height: 3px;
-        background-color: #484c7f; 
+        background-color: $third; 
         content: "";
         transition: width 0.3s ease-out;
       }
       p:hover{
-        color: #484c7f;
+        color: $second;
       }
       p:hover:after,
       p:focus:after {
@@ -341,28 +348,28 @@
           text-decoration: none;
         
           p{
-            color: #f1d4d4;
+            color: $second;
             font-size: 30px;
             font-weight: bold;
             margin-bottom: 20px;
             transition: .4s;
           }
           p:hover{
-            color: #ddb6c6;
+            color: $first;
           }
           button{
-            color: #f1d4d4;
-            background: #484c7f;
+            color: $first;
+            background: $third;
             padding: 15px 30px;
-            border: 3px solid #484c7f;
+            border: 3px solid $forth;
             border-radius: 5px;
             text-decoration: none;
             transition: .4s;
           }
           button:hover{
-            background: #f1d4d4;
-            color: #484c7f;
-            border: 3px solid #484c7f;
+            background: $second;
+            color: $forth;
+            border: 3px solid $forth;
           }
         }
       }

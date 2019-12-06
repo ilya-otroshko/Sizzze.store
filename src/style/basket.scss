@@ -12,13 +12,13 @@
             font-size: 17px;
             border-radius: 25%;
             padding: 3px 8px;
-            color: rgba(0, 0, 0, 0.9);
+            color: $forth;
             margin-right: 5px;
-            background: #f1d4d4;
+            background: $third;
         }
         svg{
             font-size: 35px;
-            color: #f1d4d4;
+            color: $third;
         }
     }
 }
@@ -80,7 +80,7 @@
                 input{
                     cursor: default;
                     border-radius: 5px;
-                    border: 2px solid #baadc3;
+                    border: 2px solid $third;
                     text-align: center;
                     width: 30%;
                     margin: 0px 3px;
@@ -90,7 +90,7 @@
                     margin-left: 10px;
                 }
                 .quantity{
-                    background: #baadc3;
+                    background: $third;
                     outline: none;
                     border: none;
                     padding: 3px 10px;
@@ -118,22 +118,22 @@
             border-radius: 5px;
             outline: none;
             background: none;
-            border: 1px solid #b692d0;
+            border: 1px solid $third;
             margin: 10px;
-            color: #b692d0;
+            color: $forth;
             transition: background .4s,
                         color .4s;
         }
         .continueShopping:hover{
-            background: #b692d0;
+            background: $third;
             color: white;
         }
         .checkout{
             color: white;
-            background: #b692d0;
+            background: $third;
         }
         .checkout:hover{
-            background: #9853ce;
+            background: $second;
         }
     }
         
@@ -149,8 +149,8 @@
             button{
                 background: none;
                 outline: none;
-                border: 1px solid #d298ff;
-                background: #d298ff;
+                border: 1px solid $second;
+                background: $third;
                 border-radius: 5px;
                 padding: 5px 10px;
                 transition: color .4s,

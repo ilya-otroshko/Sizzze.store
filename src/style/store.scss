@@ -1,9 +1,9 @@
     /////////////////////////////////  . SIDEBAR . \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .storeWrapper{
-    background: #484c7f;
+    background: $first;
     padding-bottom: 50px;
     h2{
-    color: #f1d4d4;
+    color: $forth;
     font-size: 50px;
     margin-left: 70px;
     }
@@ -15,9 +15,6 @@
     .showFilter{
         display: none;
     }
-    .storeHeader{
-        border-bottom: 1px solid #8080804d;
-    }
     .sidebar{
         width: 25%;
         margin-left: 10px;
@@ -27,8 +24,8 @@
             flex-direction: column;
             p:first-child{
                 font-size: 20px;
-                color: #f1d4d4;
-                background: #484c7f;
+                color: $forth;
+                background: $first;
                 margin: 15px 0px;
                 margin-left: -10px;
                 padding-left: 10px;
@@ -45,11 +42,11 @@
                     display: none;
                 }
                 .input-range__track--active{
-                    background: #ddb6c6;
+                    background: $third;
                 }
                 .input-range__slider {
-                    background: #ddb6c6;
-                    border: 2px solid #484c7f;
+                    background: $third;
+                    border: 2px solid $forth;
                     height: 1.2rem;
                     width: 1.2rem;
                     margin-top: -0.76rem;
@@ -57,8 +54,8 @@
                 }
                 .input-range__slider:active{   
                     transform: scale(1.5);
-                    background: #f1d4d4;
-                    border: 2px solid #484c7f;
+                    background: $second;
+                    border: 2px solid $forth;
                 }
             }
         } 
@@ -81,7 +78,7 @@
                 width: 100%!important;
                 div:nth-child(3){
                 div{
-                    background-color: #484c7f!important;
+                    background-color: $forth!important;
                 }
                 }
             }
@@ -110,13 +107,13 @@
               right: 5%;
               top: 60%;
               transition: .4s;
-              color: #484c7f;
+              color: $forth;
             }
 
           p{
             font-size: 20px;
-            color: #f1d4d4;
-            background: #484c7f;
+            color: $forth;
+            background: $first;
             margin: 15px 0px;
             margin-left: -10px;
             padding-left: 10px;
@@ -127,39 +124,37 @@
                 cursor: pointer;
                 padding: 10px;
                 outline: none;
-                background: #ddb6c6;
-                color: #484c7f;
+                background: $first;
+                color: $forth;
             }
             .mainInput{
-                border: 1px solid #19181838;
+                border: 1px solid $third;
                 width: 100%;
                 border-radius: 5px;
                 transition: .4s;
-                background:#ddb6c6;
-                color: #484c7f;
+                background:$first;
+                color: $forth;
             }
             .mainInput:hover{
-                color: #f1d4d4;
-                background: #ac8daf;      
+                color: white;
+                background: $third;      
             }
             .mainInput:hover ~ .iconInput{ 
-              color: #f1d4d4!important;
+              color: white!important;
             }
         }
-
-
     .brandsName{
         position: relative;
         display: flex;
         flex-direction: column;
-        background: #ac8daf;
+        background: $first;
         input{
             border: none;
         }
         input:hover
         {
-            background:#f1d4d4;
-            color: #484c7f;
+            background:$forth;
+            color: $third;
         }
     }
 }
@@ -176,8 +171,8 @@
             height: 150px;
             p{
                 font-size: 20px;
-                color: #f1d4d4;
-                background: #484c7f;
+                color: $forth;
+                background: $first;
                 margin: 15px 0px;
                 margin-left: -10px;
                 padding-left: 10px;
@@ -256,19 +251,19 @@
                     transition: .2s;
                 }
                 .checkbox:checked + label:before {
-                    background: #ac8daf;
+                    background: $third;
                 }
                 .checkbox:checked + label:after {
                     left: 26px;
                 }
                 .checkbox:hover + label:before {
-                    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px #ac8daf;
+                    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px $third;
                 }
             }
             p{
                 font-size: 20px;
-                color: #f1d4d4;
-                background: #484c7f;
+                color: $forth;
+                background: $first;
                 margin: 15px 0px;
                 margin-left: -10px;
                 padding-left: 10px;
@@ -289,8 +284,8 @@
             .brandFilter{
                 p{
                     font-size: 20px;
-                    color: #f1d4d4;
-                    background: #484c7f;
+                    color: $forth;
+                    background: $first;
                     margin: 15px 0px;
                     margin-left: -10px;
                     padding-left: 10px;

@@ -73,6 +73,9 @@
         }
         .brandSelect{
           position: relative;
+          .scrollbarsClass{
+              border: none!important;
+          }
           .showBrandsName-enter-active,
           .showBrandsName-enter-done{
             border: 1px solid #19181838;
@@ -97,36 +100,38 @@
             cursor: pointer;
             padding: 10px;
             outline: none;
-            background: white;
+            background: $first;
+            color: $forth;
         }
         .mainInput{
-        
-            border: 1px solid #19181838;
+            border: 1px solid $third;
             width: 90%;
             border-radius: 5px;
             transition: .4s;
-            background:transparent;
+            background:$first;
+            color: $forth;
         }
         .mainInput:hover{
-          color: black;  
-          background: #baadc3;       
+          color: white;
+          background: $third;       
         }
         .mainInput:hover ~ .iconInput{ 
-          color: black!important;
+          color: white!important;
         }
     }
     .brandsName{
     position: relative;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: $first;
     input{
         display: none;
         border: none;
     }
     input:hover
     {
-        background:#eee7f3;
+        background:$forth;
+        color: $third;
     }
     }
     .buyAndBasket{
@@ -136,14 +141,14 @@
             padding: 10px;
             border-radius: 5px;
             outline: none;
-            border: 1px solid#b692d0;
-            background: #b692d0;
+            border: 1px solid $second;
+            background: $third;
             color: white;
             transition: background .4s,
                         color .4s;
             &:hover{
-                background: #b692d0;
-                color: white;
+                background: $second;
+                color: $forth;
             }
         }
     }
@@ -153,7 +158,7 @@
 
 .detailsTable{
     width: 100%;
-    background: linear-gradient(0deg, white -20%, #baadc3 91%);
+    background: linear-gradient(0deg, white -20%, $first 91%);
     text-align: center;
     margin-top: 30px;
     tr{
@@ -194,7 +199,7 @@
         margin: 0 auto;
         font-size: 20px;
         text-align: center;
-        border-bottom: 2px solid #baadc3;
+        border-bottom: 2px solid $third;
         padding-bottom: 10px;
         border-radius: 20px;
         margin-top: 50px;
