@@ -115,7 +115,7 @@ export default class SimpleSlider extends Component {
           <SlideBlock 
           
           blocks={this.state.blocks}
-          name="Ugg Neumel Black"
+          name="ugg neumel black"
           price="1650"
           stok={stok}
           key={count.id}

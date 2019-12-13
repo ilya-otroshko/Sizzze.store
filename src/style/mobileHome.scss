@@ -27,7 +27,7 @@
     }
   }
       #page-wrap{
-        background: white;
+        background: $first;
       }
       #outer-container{
         background: $first;
@@ -74,7 +74,7 @@
         fill: #373a47;
       }
       .bm-item-list {
-        background: $third;
+        background: $forth;
         padding: 0;
         div:first-child{
             width: 100%;
@@ -85,8 +85,11 @@
                   a{color:$first}
                 }
                 li:last-child{
+                  a{
+                    color:$forth;
+                  }
                   svg{
-                    color:$second;
+                    color:$third;
                   }
                 }
             }
@@ -113,14 +116,14 @@
     form{
       .brandSelect{
         .scrollbarsClass{
-          bottom: 48%;
+          bottom: 88%;
         }
       }
       flex-direction: column;
       .selects{
         width: 100%;
         flex-direction: column;
-
+        margin-bottom: 30px;
         .brandSelect,
         .modelSelect{
           margin: 0 auto;
@@ -149,7 +152,7 @@
     .brandsNav {
       width: 100%;
       right: 0;
-      margin-top: 25px;
+      margin-top: 28px;
       li{
         text-align: center;
       }

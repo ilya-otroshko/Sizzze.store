@@ -10,7 +10,7 @@ export default class ChooseBrand extends Component{
  
     this.state = {
     brandName: [
-      {id: 'all', name: 'все'},
+      {id: 'all', name: 'бренды: все'},
       {id: 'adidas', name: 'adidas'},
       {id: 'nike', name: 'nike'},
       {id: 'puma', name: 'puma'},
@@ -18,7 +18,7 @@ export default class ChooseBrand extends Component{
       {id: 'new-balance', name: 'new-balance'}
     ],
     modelName: [
-      {id: 'all', name: 'все'},
+      {id: 'all', name: 'модели: все'},
       {id: '270', name: '270'},
       {id: '720', name: '720'},
       {id: 'air-force', name: 'Air Force'},
@@ -55,11 +55,9 @@ render() {
             <Select
             brandName={this.state.brandName}
             modelName={this.state.modelName}
-            title1={"бренд: "}
-            title2={"модель: "}
-            colorIcon={"#f1d4d4"}
-            brandValue={"все"}
-            bg={"#484c7f"}/>
+            brandValue={"бренды: все"}
+            modelValue={"модели: все"}
+            />
       </section>
     </div>
     

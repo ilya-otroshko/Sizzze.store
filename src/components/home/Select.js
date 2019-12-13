@@ -13,7 +13,7 @@ export default class Select extends Component {
             isBrandListVisible: false,
             isModelListVisible: false,
             brandValue: props.brandValue,
-            modelValue: 'все'};
+            modelValue: props.modelValue};
       this.handleChangeBrand = this.handleChangeBrand.bind(this);
       this.handleChangeModel = this.handleChangeModel.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,7 +47,6 @@ export default class Select extends Component {
             : 
         this.setState({
            transformIconBrand : 'rotate(180deg)', 
-           colorBrand: '#f1d4d4', 
            bg: this.props.bg})
     }; 
 
@@ -81,7 +80,16 @@ export default class Select extends Component {
            transformIconModel : 'rotate(180deg)', 
            colorModel: '#f1d4d4',
            bg2: this.props.bg })
-    }; 
+    };
+    animateButton = (event) => {
+           let button = document.querySelector('.bubbly-button')
+        button.classList.remove('animate');
+         button.classList.add('animate');
+        setTimeout(function(){
+            button.classList.remove('animate');
+        },300);
+        }; 
+    
      render() {
         
         let scroll = {width: '100%'}
@@ -98,7 +106,6 @@ export default class Select extends Component {
             <div className="selects">
             
                 <div className="brandSelect">
-                    <p>{this.props.title1}</p>  
                     <OutsideClickHandler
                         onOutsideClick={() => {
                             this.clickOutBrand()
@@ -153,7 +160,6 @@ export default class Select extends Component {
                 
                 
                 <div className="modelSelect">
-                <p>{this.props.title2}</p>  
                             
                 <OutsideClickHandler
                         onOutsideClick={() => {
@@ -166,14 +172,12 @@ export default class Select extends Component {
                 readOnly
                 onClick= {() => this.modelToggleList(this.state.isModelListVisible)}
                 className="mainInput"
-                style={{color: this.state.colorModel,
-                    background: this.state.bg2}}/>
+                />
                 <div className="iconInput">
                         <FontAwesomeIcon 
                         icon={faCaretDown} 
                         className="brandsIcon"
-                        style={{transform:this.state.transformIconModel, 
-                        color: this.state.colorModel}}
+                        style={{transform:this.state.transformIconModel}}
                         />
                     </div>
                    
@@ -208,7 +212,10 @@ export default class Select extends Component {
                 </div>
          </div>
                     <div>
-                    <button type="button"  onClick={this.handleSubmit}>есть че</button>
+                    <button type="button"  
+                    onClick={this.animateButton}
+                    className='bubbly-button'
+                    >есть че</button>
 
                     </div>
          
