@@ -31,11 +31,21 @@ export default class ProductInfo extends Component {
         description: 'Сегодня UGG – это самый популярный производитель угг. Каждый сезон бренд выпускает разнообразные новые модели – от очень коротких до высоких, от водоотталкивающих и практичных до декорированных и эпатажных. Сапоги UGG сделаны из высококачественной овчины. Легкая, прочная, формованная подошва предотвращает скольжение. Стелька из овчины, латекса и пены, выдерживает любой холод и защищает от попадания влаги. Поверхность сапог не деформируется и не теряет свой первоначальный вид, она не пропускает влагу и способствует сохранению комфорта и уюта. Все модели бренда UGG не требуют особого ухода, что обеспечивает удивительную длительность их использования.'
     };
   }
-  buyToggleList = () => {
-         
-    this.setState({
+      animateButton = (event) => {
+        console.log(1)
+        let button = document.querySelectorAll('.bubbly-button')[1]
+        console.log(button)
+        button.classList.remove('animate');
+         button.classList.add('animate');
+        setTimeout(function(){
+            button.classList.remove('animate');
+        },300);
+         this.setState({
         buy: true
     });
+        }; 
+  buyToggleList = () => {
+   
   }
   render() {
     return (
@@ -56,22 +66,22 @@ export default class ProductInfo extends Component {
               <div className="sizeFilter">
                   <Select 
                   brandName={this.state.sizes}
-                  title1={'Размер:'}
-                  colorIcon={'black'}
-                  bg={'#baadc3'}
                   brandValue={'Выберите свой размер'}
                   />
                   </div>
                   
                   <div className="buyAndBasket">
                     {this.state.buy ?(
-                      <button>
+                      <button
+                      onClick={this.animateButton}
+                      className='bubbly-button'>
                           Корзина
                     </button>
                     )
                     :(
                       <button
-                        onClick={this.buyToggleList}>
+                        onClick={this.animateButton}
+                        className='bubbly-button'>
                           Купить
                       </button>
                     )}

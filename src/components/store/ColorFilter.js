@@ -12,10 +12,10 @@ export default class ColorFilter extends Component {
   }
  
   render() {
-    const colors = new Array(8)
+    const colors = new Array(7)
     .fill('')
     .map( (_, i) => ( {id:i, 
-        value:["rgb(228, 50, 58)", "white", "black", "rgb(119, 216, 80)", "rgb(8, 114, 187)", "rgb(235, 145, 230)", "rgb(238, 239, 68)", "rgb(204, 204, 204)"]} ) )  
+        value:["rgb(228, 50, 58)", "white", "black", "rgb(119, 216, 80)", "rgb(8, 114, 187)", "rgb(238, 239, 68)", "rgb(204, 204, 204)"]} ) )  
     return (
         <div className="colorFilter">
                 <p>цвет</p>

@@ -1,10 +1,10 @@
 .product{
     display: flex;
     padding-top: 50px;
+    justify-content: space-between;
 }
-
 .productSlider{
-    width: 45%;
+    width: 43%;
 }
 .productInfo{
     width: 55%;
@@ -16,8 +16,6 @@
     width: 100%;
     .slick-list{
         height: 100%!important;
-        width: 90%;
-        margin: 0 auto;
         .slick-track{
             height: 100%;
             padding-bottom: 20px;
@@ -73,9 +71,7 @@
         }
         .brandSelect{
           position: relative;
-          .scrollbarsClass{
-              border: none!important;
-          }
+
           .showBrandsName-enter-active,
           .showBrandsName-enter-done{
             border: 1px solid #19181838;
@@ -88,10 +84,9 @@
           width: fit-content;
           position: absolute;
           right: 15%;
-          top: 60%;
+          top: 25%;
           transition: .4s;
         }
-    
       p{
         font-weight: 400;
         font-size: 20px;
@@ -112,18 +107,18 @@
             color: $forth;
         }
         .mainInput:hover{
-          color: white;
-          background: $third;       
+            color: $third;
+            background: $forth;       
         }
         .mainInput:hover ~ .iconInput{ 
-          color: white!important;
+          color: $third!important;
         }
     }
     .brandsName{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: $first;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: $first;
     input{
         display: none;
         border: none;
@@ -137,19 +132,20 @@
     .buyAndBasket{
         width: 25%;
         button{
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            outline: none;
-            border: 1px solid $second;
-            background: $third;
-            color: white;
-            transition: background .4s,
-                        color .4s;
-            &:hover{
-                background: $second;
-                color: $forth;
-            }
+            padding: 11px 20px;
+                  box-shadow: 0px 0px 7px 1px #00000026;
+                  background: transparent;
+                  color: $third;
+                  background-color: $forth;
+                  outline: none;
+                  border: none;
+                  border-radius: 4px;
+                  z-index: 1;
+        }
+        .bubbly-button{
+            position: relative;
+            transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+            box-shadow: 0 2px 25px rgba(255, 175, 139, .5);
         }
     }
 }
@@ -194,8 +190,11 @@
 
 
 .productRecomm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     p:first-child{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         font-size: 20px;
         text-align: center;
@@ -205,7 +204,7 @@
         margin-top: 50px;
     }
     .productsList{
-        width: 100%;
+        width: 110%;
         ul{
             margin: 0;
             padding: 0;
@@ -224,18 +223,23 @@
                     .cardBlock{
                         transition: box-shadow .4s;
                         border-radius: 10px;
-                        box-shadow: 0 0 1px #7d7d7d96;
-    
+                        .infoSlider{
+                               padding: 20px;
+                               background: $first;
+                                h3{
+                                    font-size: 20px;
+                                    transition: transform .3s,
+                                                color .3s;
+                                }
+                            }
                     }
                     .cardBlock:hover{
-                        box-shadow: 0 0 13px black;
-                        .infoSlider{
-                            border-top: 1px solid black;
-                        }
+                        box-shadow: 0 2px 25px 4px rgba(255, 175, 139, 0.7);
                     }
                     img{
                         width: 100%;
-                        border-radius: 10px;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
                     }
                 }
             }

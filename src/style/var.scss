@@ -6,3 +6,9 @@ $fuschia: $forth;
 $button-bg: $third;
 $button-text-color: $first;
 $baby-blue: #f8faff; 
+
+.bubbly-button{
+position: relative;
+transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+box-shadow: 0 2px 25px rgba(255, 175, 139, .5);
+}

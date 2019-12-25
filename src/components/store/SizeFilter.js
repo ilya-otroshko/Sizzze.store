@@ -26,12 +26,9 @@ export default class SizeFilter extends Component {
   render() {
     return (
         <div className="sizeFilter">
-
+          <p>размер</p>
             <Select 
             brandName={this.state.size}
-            title1={'размер'}
-            colorIcon={'#484c7f'}
-            bg={'#ac8daf'}
             brandValue={'все'}
             />
 

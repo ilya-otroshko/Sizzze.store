@@ -8,17 +8,27 @@ import { faTruck } from '@fortawesome/free-solid-svg-icons'
 import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
 
 
-class Footer extends Component {
-  
-      render(){
 
+class Footer extends Component {
+      animateButton = (event) => {
+        let button = document.querySelectorAll('.bubbly-button')[1]
+        button.classList.remove('animate');
+         button.classList.add('animate');
+        setTimeout(function(){
+            button.classList.remove('animate');
+        },300);
+        }; 
+      
+      render(){
+        setInterval(this.animateButton, 1000)
   return (
         <div className="footer">
           <Image
             src={require('../../images/footer.jpeg')}
             webp={require('../../images/footer.webp')}
           />
-            <div>
+            <div
+            className='bubbly-button'>
               <FontAwesomeIcon
               icon={faTruck} />
               <FontAwesomeIcon

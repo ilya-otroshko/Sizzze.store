@@ -82,7 +82,7 @@ export default class Select extends Component {
            bg2: this.props.bg })
     };
     animateButton = (event) => {
-           let button = document.querySelector('.bubbly-button')
+           let button = document.querySelectorAll('.bubbly-button')[0]
         button.classList.remove('animate');
          button.classList.add('animate');
         setTimeout(function(){

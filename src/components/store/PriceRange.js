@@ -16,7 +16,7 @@ export default class PriceRange extends Component {
     return (
 
         <div className="priceRange">
-            <p>фильтр по цене</p>
+            <p>цена</p>
           <InputRange
             step={10}
             maxValue={1000}

@@ -41,21 +41,26 @@
                 .input-range__label{
                     display: none;
                 }
+                .input-range__track--background{
+                    cursor: col-resize;    
+                }
                 .input-range__track--active{
                     background: $third;
+                    cursor: col-resize;
                 }
                 .input-range__slider {
                     background: $third;
-                    border: 2px solid $forth;
+                    border: 2px solid $third;
                     height: 1.2rem;
                     width: 1.2rem;
                     margin-top: -0.76rem;
                     cursor: col-resize;
                 }
                 .input-range__slider:active{   
-                    transform: scale(1.5);
-                    background: $second;
-                    border: 2px solid $forth;
+                    transform: scale(1.4);
+                    background: $first;
+                    border: 1px solid $third;
+                    cursor: col-resize;
                 }
             }
         } 
@@ -66,21 +71,9 @@
 
         .sizeFilter{
             position: relative;
-            display: flex;
             width: 100%;
             .scrollbarsClass{
-                border:1px solid #ffffff8c;
-                border-bottom-right-radius: 5px;
-                border-bottom-left-radius: 5px;
-                margin-top: -3px;
-                height: 170%!important;
-                position: absolute!important;
                 width: 100%!important;
-                div:nth-child(3){
-                div{
-                    background-color: $forth!important;
-                }
-                }
             }
             form{
                 width: 100%;
@@ -105,7 +98,7 @@
               width: fit-content;
               position: absolute;
               right: 5%;
-              top: 60%;
+              top: 25%;
               transition: .4s;
               color: $forth;
             }
@@ -136,11 +129,11 @@
                 color: $forth;
             }
             .mainInput:hover{
-                color: white;
-                background: $third;      
+                color: $third;
+                background: $forth;      
             }
             .mainInput:hover ~ .iconInput{ 
-              color: white!important;
+              color: $third;
             }
         }
     .brandsName{
@@ -300,14 +293,14 @@
                          margin: 15px 0px;
                          
                          a{
-                             color: black;
+                             color: $forth;
                              text-decoration: none;
                              font-size: 20px;
                              transition: color .4s;
                          }
                     
                         a:hover{
-                            color: #ac8daf;
+                            color: $third;
                         }
                      }
                 }
@@ -336,7 +329,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 a{
-                    color: black;
+                    color: $forth;
                     text-decoration: none;
                     width: 30%;
                     margin: 10px;
@@ -347,12 +340,19 @@
                         .cardBlock{
                             transition: box-shadow .4s;
                             border-radius: 10px;
+                            .infoSlider{
+                               padding: 20px;
+                               background: $first;
+                                h3{
+                                    font-size: 20px;
+                                    transition: transform .3s,
+                                                color .3s;
+                                }
+                            }
                         }
                         .cardBlock:hover{
-                            box-shadow: 0 0 13px #000000a1;
-                            .infoSlider{
-                              border-top: 1px solid #0000006e;
-                            }
+                            box-shadow: 0 2px 25px 4px rgba(255, 175, 139, .7);
+
                         }
                         img{
                             width: 100%;

@@ -20,7 +20,6 @@ export default function Products(props){
                 <div className="infoSlider">
                     <h3>{props.name}</h3>
                     <p>{props.price}uah</p>
-                    <span>In stok: {props.stok.join(', ')}</span>
                   </div>
               </div>
               </li>
