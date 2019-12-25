@@ -20,7 +20,6 @@ class Footer extends Component {
         }; 
       
       render(){
-        setInterval(this.animateButton, 1000)
   return (
         <div className="footer">
           <Image
@@ -28,7 +27,8 @@ class Footer extends Component {
             webp={require('../../images/footer.webp')}
           />
             <div
-            className='bubbly-button'>
+            className='bubbly-button'
+            onClick={this.animateButton}>
               <FontAwesomeIcon
               icon={faTruck} />
               <FontAwesomeIcon
