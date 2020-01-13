@@ -2,6 +2,7 @@
 @import'./style/var.scss';
 @import'./style/header.scss';
 @import'./style/home.scss';
+@import'./style/error.scss';
 @import'./style/footer.scss';
 @import'./style/store.scss';
 @import'./style/product.scss';
@@ -25,9 +26,11 @@ html{
   position: relative;
   min-height: 100%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
+  height: 100%;
   display: flex;
   flex-direction: column;
   font-family: 'Prosto One', cursive;

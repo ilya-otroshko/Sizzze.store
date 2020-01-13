@@ -18,6 +18,7 @@ export default class Store extends Component{
       ]
     };
   }
+
   render(){
 
     const stok = [40, 41, 42, 43, 44]
