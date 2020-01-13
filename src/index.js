@@ -5,7 +5,6 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux'
 
-
 function orderInfo(state = {}, action) {
     if  (action.type === 'cash')  {
         return {
@@ -51,7 +50,6 @@ const store = createStore(orderInfo, window.__REDUX_DEVTOOLS_EXTENSION__ && wind
 store.subscribe(() => {
     console.log('subscribe', store.getState());
 })
-
 
 ReactDOM.render(
 <Provider store={store}>
