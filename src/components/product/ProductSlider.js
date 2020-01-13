@@ -8,12 +8,7 @@ export default class ProductSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      counts: [
-        {id: 1, name : 1.1},
-        {id: 2, name : 1.2},
-        {id: 3, name : 1.3},
-        {id: 4, name : 1.4}
-      ],
+      images: props.images,
       blocks: [
         {id: 1}
       ],
@@ -30,7 +25,8 @@ export default class ProductSlider extends Component {
   }
 
   render() {
-    const stok = [40, 41, 42, 43, 44]
+
+
     const settings1 = {
       
       infinite: true,
@@ -52,23 +48,26 @@ export default class ProductSlider extends Component {
       asNavFor: this.state.nav1,
       swipe: false
     };
+
+    if(this.state.nav1 !== null)
+    {
+      var images = this.state.images.slice(1)
+      console.log(images)
     return (
+
       <div className="productSlider">
         <Slider
           ref={slider => (this.slider1 = slider)}
           {...settings1}
           className="productBigSlider"
         >
-         {this.state.counts.map(count =>(
+          {images.map(image =>(
           <SliderProduct
-          
+          images={image.picture.big}
           blocks={this.state.blocks}
-          stok={stok}
-          key={count.name}
-          count={count.name}/>
-          
+          key={image.id}
+          count={image.id}/>
           ))}
-
         </Slider>
 
         <Slider
@@ -76,17 +75,29 @@ export default class ProductSlider extends Component {
           {...settings2}
           className="productSmallSlider"
         >
-          {this.state.counts.map(count =>(
+          {images.map(image =>(
           <SliderProduct 
-          
+          images={image.picture.thumb}
           blocks={this.state.blocks}
-          stok={stok}
-          key={count.name}
-          count={count.name}/>
-          
+          key={image.id}
+          count={image.id}/>
           ))}
-
         </Slider>
+      </div>
+    );
+    }
+    return (
+      <div className="productSlider">
+        <Slider
+          ref={slider => (this.slider1 = slider)}
+          {...settings1}
+          className="productBigSlider"
+        />
+        <Slider
+          ref={slider => (this.slider2 = slider)}
+          {...settings2}
+          className="productSmallSlider"
+        />
       </div>
     );
   }

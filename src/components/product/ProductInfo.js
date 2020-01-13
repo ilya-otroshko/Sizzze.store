@@ -9,32 +9,13 @@ export default class ProductInfo extends Component {
     super(props);
  
     this.state = {
-        buy: false,
-        color: 'черный',
-        gender: 'мужские',
-        title: 'Ugg Neumel Black',
-        price: 1650,
-        sizes: [
-          {id: 36, name: 36, count: 0, stock: ''},
-          {id: 37, name: 37, count: 2, stock: 'inStock'},
-          {id: 38, name: 38, count: 0, stock: ''},
-          {id: 39, name: 39, count: 2, stock: 'inStock'},
-          {id: 40, name: 40, count: 0, stock: ''},
-          {id: 41, name: 41, count: 0, stock: ''},
-          {id: 42, name: 42, count: 2, stock: 'inStock'},
-          {id: 43, name: 43, count: 0, stock: ''},
-          {id: 44, name: 44, count: 1, stock: 'inStock'},
-          {id: 45, name: 45, count: 0, stock: ''},
-
-        ],
-        country: 'китай',
-        description: 'Сегодня UGG – это самый популярный производитель угг. Каждый сезон бренд выпускает разнообразные новые модели – от очень коротких до высоких, от водоотталкивающих и практичных до декорированных и эпатажных. Сапоги UGG сделаны из высококачественной овчины. Легкая, прочная, формованная подошва предотвращает скольжение. Стелька из овчины, латекса и пены, выдерживает любой холод и защищает от попадания влаги. Поверхность сапог не деформируется и не теряет свой первоначальный вид, она не пропускает влагу и способствует сохранению комфорта и уюта. Все модели бренда UGG не требуют особого ухода, что обеспечивает удивительную длительность их использования.'
+      sizes:props.sizes,
+      buy: false,
+      product: props.product,
     };
   }
       animateButton = (event) => {
-        console.log(1)
         let button = document.querySelectorAll('.bubbly-button')[1]
-        console.log(button)
         button.classList.remove('animate');
          button.classList.add('animate');
         setTimeout(function(){
@@ -44,23 +25,20 @@ export default class ProductInfo extends Component {
         buy: true
     });
         }; 
-  buyToggleList = () => {
-   
-  }
   render() {
     return (
         <div className="productInfo">
-           <h3>{this.state.title}</h3> 
+           <h3>{this.state.product.name}</h3> 
            <p className="productPrice">
-           {this.state.price}грн</p>
+           {this.state.product.price_sell}грн</p>
 
 
            <p className="productCountry">
-             Производитель: {this.state.country}</p>
+             Производитель: {this.state.product.made_in}</p>
 
            <p className="productDescription">
              Описание: </p>
-             <p>{this.state.description}</p>
+             <p>{this.state.product.description}</p>
 
             <div className="sizeAndBuy">
               <div className="sizeFilter">
@@ -69,7 +47,6 @@ export default class ProductInfo extends Component {
                   brandValue={'Выберите свой размер'}
                   />
                   </div>
-                  
                   <div className="buyAndBasket">
                     {this.state.buy ?(
                       <button
@@ -87,9 +64,6 @@ export default class ProductInfo extends Component {
                     )}
                   </div>
             </div>
-            
-             
-              
              <table className="detailsTable">
             <thead>
               <tr>
@@ -97,24 +71,23 @@ export default class ProductInfo extends Component {
                 <th>Пол</th>
                 <th>Производитель</th>
                 <th>Страна</th>
-                
               </tr>
               </thead>
               <tbody>
               <tr>
                   <td>
-                    <NavLink to={`/color/${this.state.color}`}>
-                      {this.state.color} 
+                    <NavLink to={`/color/${this.state.product.color}`}>
+                      {this.state.product.color} 
                     </NavLink>
                   </td>
                   <td>
-                    <NavLink to={`/gender/${this.state.gender}`}>
-                      {this.state.gender}
+                    <NavLink to={`/gender/${this.state.product.gender}`}>
+                      {this.state.product.gender}
                     </NavLink>
                   </td>
                   <td>
-                    <NavLink to={`/country/${this.state.country}`}>
-                      {this.state.country}
+                    <NavLink to={`/country/${this.state.product.made_in}`}>
+                      {this.state.product.made_in}
                     </NavLink>
                   </td>
               </tr>

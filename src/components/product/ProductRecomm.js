@@ -15,16 +15,10 @@ export default class ProductRecomm extends Component {
   }
  
   render() {
-    const stok = [40, 41, 42, 43, 44]
     return (
         <div className="productRecomm">
           <p>Related Products</p>
-          <ProductList
-           blocks={this.state.blocks}
-           name="Ugg Neumel Black"
-           price="1650"
-           stok={stok}
-          >
+          <ProductList>
           </ProductList>
         </div>
     );
