@@ -3,8 +3,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     proxy({
-      target: 'https://sizzzeapi.herokuapp.com',
-      changeOrigin: true,
+      target: 'https://sizzzeapi.herokuapp.com'
     })
   );
 };
